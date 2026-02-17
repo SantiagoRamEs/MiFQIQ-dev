@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}" />
+<link rel="stylesheet" href="{% static 'css/professors.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <h3>CONOCE A TUS PROFESORES</h3>
+    <form>
+        <input class="search" type="text" id="search" placeholder="Busca a tu profe o el curso..." />
+    </form>
+</div>
+
+<div class="cards">
+    {% for item in professors %}
+
+    <div class="horizontal-card">
+        <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
+
+            <div class="photo-container">
+                <img src="{{ item.professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo">
+
+            </div>
+
+            <div class="info-container">
+                <p class="name">{{ item.professor.name }}</p>
+                <div class="general-rating">
+                    <span class="stars">{{ item.stars }}</span>
+                    <span class="avg">({{ item.general_avg }})</span>
+                </div>
+            </div>
+        </a>
+        <p class="cursos">{{ item.professor.courses }}</p>
+    </div>
+
+
+    {% endfor %}
+</div>
+<script src="{% static 'javascript/search.js' %}" defer></script>
+{% block extra_js %}{% endblock %}
+<div class="alternative-container">
+    <p class="alternative">
+        ¿No encuentras tu profe? Envía una solicitud para agregarlo
+        <a class="agregar-prof" href="https://forms.gle/SwJgqMUZAuToZ1p37">aquí.</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% load static %} {% load socialaccount %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock%}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert-warning">{{ message }}</div>
+{% endfor %}
+{% endif %}
+
+
+<!-- inicio de sesion cancelado -->
+{% if request.GET.cancelled %}
+<p class="error" style="color:red;">
+    Debe iniciar sesión con un correo institucional (@unmsm.edu.pe).
+</p>
+{% endif %}
+
+<p class="title-login">¡Bienvenido a Mi FQIQ!</p>
+<div class="content-all">
+    <div class="body-content">
+        <img class="img-fqiq" src="{% static 'img/home-fqiq.jpg' %}" alt="Facultad de Química e Ingeniería Química">
+
+        <div class="login-content">
+            {% if user.is_authenticated %}
+            <p class="nota">Hola, {{ user.first_name|truncatewords:1 }} ya has iniciado sesión.
+            </p>
+            <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn-logout">Cerrar sesión</button>
+            </form>
+            {% else %}
+            <h2>Iniciar sesión</h2>
+            <a class="link-login" href="{% provider_login_url 'google' %}">
+                <div class="google-btn">
+                    <img class="img-google" src="{% static 'img/icono_google.png' %}">
+                    <p class="text-login">Iniciar sesión con Google</p>
+                </div>
+            </a>
+            <p class="nota">Recuerda que solo puedes inciar sesión con tu correo institucional (ejemplo:
+                user@unmsm.edu.pe)
+            </p>
+            {% endif %}
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="information">
+        <h3>¿Qué puedes hacer en <strong>MI FQIQ</strong>?</h3>
+        <div class="beneficios">
+            <section class="card">
+                <p class="title">Conocer a tus docentes</p>
+                <p class="description">
+                    Consulta calificaciones y comentarios realizados por otros estudiantes sobre sus experiencias
+                    académicas con los docentes. </p>
+            </section>
+            <section class="card">
+                <p class="title">Calificar a tus docentes</p>
+                <p class="description">
+                    Evalúa a tus profesores y comparte comentarios que respalden tu puntuación de manera responsable.
+                </p>
+            </section>
+            <section class="card">
+                <p class="title">Tienes acceso exclusivo</p>
+                <p class="description">
+                    La plataforma está disponible únicamente para estudiantes con correo institucional.
+                </p>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

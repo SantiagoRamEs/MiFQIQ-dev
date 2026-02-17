@@ -1,0 +1,111 @@
+{% extends 'base.html' %} {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile_professor.css' %}" />
+<link rel="stylesheet" href="{% static 'css/base.css' %}" />
+{% endblock %}{% block content %}
+<div class="elements">
+    <div class="card profile-card">
+        <div class="info">
+            <img src="{{ professor.photo.url }}" alt="{{ professor.name }}" class="professor-photo">
+            <p class="name">{{ professor.name }}</p>
+            <p class="cursos">{{ professor.courses }}</p>
+        </div>
+
+        <div class="calificacion">
+            <ul class="items">
+                <li>PUNTUALIDAD</li>
+                <li class="star">
+                    {{ stats.stars_puntuality }} <span>({{ stats.avg_puntuality }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>AMBIENTE DE LA CLASE</li>
+                <li class="star">
+                    {{ stats.stars_class_environment }} <span>({{ stats.avg_class_environment }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>EMPATÍA</li>
+                <li class="star">
+                    {{ stats.stars_empathy }} <span>({{ stats.avg_empathy }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>EVALÚA CONTENIDOS</li>
+                <li class="star">
+                    {{ stats.stars_class_evaluation }} <span>({{ stats.avg_class_evaluation }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>FACILIDAD DE EXMS.</li>
+                <li class="star">
+                    {{ stats.stars_exam_difficulty }}<span>({{ stats.avg_exam_difficulty }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>CUMPLE EL SILABO</li>
+                <li class="star">
+                    {{ stats.stars_silabo }} <span>({{ stats.avg_silabo }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>COHERENCIA EN CALIF.</li>
+                <li class="star">
+                    {{ stats.stars_grading_consistency }} <span>({{ stats.avg_grading_consistency }})</span>
+                </li>
+            </ul>
+            <ul class="items">
+                <li>MATERIAL DIDÁCTICO</li>
+                <li class="star">
+                    {{ stats.stars_teaching_material }} <span>({{ stats.avg_teaching_material }})</span>
+                </li>
+            </ul>
+        </div>
+
+        {% if user.is_authenticated %}
+        <div class="action-buttons">
+            {% if user_already_graded %}
+            <div class="already-graded-box">
+                <p class="already-graded">✅ Ya calificaste a este profesor.</p>
+                <div class="btn-editar">
+                    <a href="{% url 'editgrade' professor.id %}" class="link-editar">Editar mi calificación</a>
+                </div>
+            </div>
+            {% else %}
+            <a href="{% url 'creategrade' %}?professor={{ professor.id }}" class="link-calificar">
+                Calificar Profesor
+            </a>
+            {% endif %}
+
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="comments-section">
+        <h3>¿Qué opinan tus compañeros acerca de este profesor?</h3>
+
+        <div class="comments-container">
+            {% if has_comments %}
+            {% for grade in grades %}
+            {% if grade.comment %}
+            <article class="comment">
+                <div class="comment-body">
+                    <div class="comment-header">
+                        <div class="autor">{{ grade.user.first_name }} {{ grade.user.last_name }}</div>
+                        <div class="fecha">{{ grade.created|date:"d/m/Y" }}</div>
+                    </div>
+                    <div class="comment-content">{{ grade.comment }}</div>
+                </div>
+            </article>
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <p class="no-comments">Aún no hay comentarios para este profesor.</p>
+            {% endif %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

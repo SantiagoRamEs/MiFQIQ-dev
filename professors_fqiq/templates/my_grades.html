@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% load static%}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/my_grades.css' %}" />
+{% endblock %}
+{% block content %}
+<div class="my_grades">
+    <h1 class="title">Mis calificaciones</h1>
+    {% if grades %}
+    <table>
+        <thead class="grades">
+            <tr>
+                <th class="label">Professor</th>
+                <th class="label">Fecha</th>
+                <th class="label">Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody class="content">
+            {% for grade in grades %}
+            <tr>
+                <td>
+                    <a class="name" href="{% url 'profile_professor' grade.professor.id %}">{{ grade.professor }} </a>
+                </td>
+                <td class="dates">
+                    {{ grade.created|date:"d/m/Y" }}
+                </td>
+                <td class="delete-grade">
+                    <form method="post" action="{% url 'delete_grade' grade.id %}">
+                        {% csrf_token %}
+                        <button class="btn-delete" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    {% else %}
+    <p class="no-grades">Aún no haz calificado a tus profesores. Ir a <a href="/professors/">profesores</a>.</p>
+    {% endif%}
+</div>
+{% endblock %}
