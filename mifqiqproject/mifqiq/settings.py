@@ -33,7 +33,7 @@ DEBUG = config('MY_DEBUG', cast=bool, default=False)
 
 # ==================== SEGURIDAD ====================
 # ALLOWED_HOSTS DEBE configurarse con los dominios reales en producción
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = ['mifqiq-dev.onrender.com']
 
 # HTTPS/SSL (Activar en producción)
 SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', cast=bool, default=False)
