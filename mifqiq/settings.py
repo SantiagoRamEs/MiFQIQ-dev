@@ -35,10 +35,16 @@ DEBUG = config('MY_DEBUG', cast=bool, default=False)
 # ALLOWED_HOSTS DEBE configurarse con los dominios reales en producción
 ALLOWED_HOSTS = ['mifqiq-dev.onrender.com']
 
-# HTTPS/SSL (Activar en producción)
-SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', cast=bool, default=False)
-SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', cast=bool, default=False)
-CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE', cast=bool, default=False)
+# HTTPS/SSL
+SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', cast=bool, default=True)
+SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', cast=bool, default=True)
+CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE', cast=bool, default=True)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
+
 
 # Security Headers
 SECURE_BROWSER_XSS_FILTER = True
