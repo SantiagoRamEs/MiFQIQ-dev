@@ -10,3 +10,5 @@ class ProfessorAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Professor, ProfessorAdmin)
 admin.site.register(Grade, GradeAdmin)
+
+is_active = True
