@@ -3,14 +3,14 @@ from django.core.exceptions import ValidationError
 from PIL import Image
 
 def validate_image_size(image):
-    """Valida que la imagen no exceda 5MB"""
+    #5MB/img max
     file_size = image.file.size
     limit_mb = 5
     if file_size > limit_mb * 1024 * 1024:
         raise ValidationError(f'El archivo no puede exceder {limit_mb}MB')
 
 def validate_image_format(image):
-    """Valida que la imagen sea JPEG o PNG"""
+    #JPEG o PNG
     valid_formats = ['JPEG', 'PNG', 'JPG']
     try:
         img = Image.open(image)
@@ -20,7 +20,7 @@ def validate_image_format(image):
         raise ValidationError('El archivo no es una imagen válida')
 
 def validate_image_dimensions(image, max_width=1920, max_height=1080):
-    """Valida las dimensiones de la imagen"""
+    #dimensiones de la imagen
     try:
         img = Image.open(image)
         width, height = img.size

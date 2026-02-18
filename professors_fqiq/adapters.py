@@ -9,7 +9,17 @@ class RestrictDomainSocialAccountAdapter(DefaultSocialAccountAdapter):
         
         # Obtener el email del usuario
         email = ''
-        email = sociallogin.account.extra_data.get('email', '').strip().lower()
+        
+        # obtener email de diferentes fuentes
+        if sociallogin.email_addresses:
+            email = sociallogin.email_addresses[0].email
+        elif hasattr(sociallogin.account, 'extra_data') and 'email' in sociallogin.account.extra_data:
+            email = sociallogin.account.extra_data.get('email', '')
+        elif sociallogin.user and sociallogin.user.email:
+            email = sociallogin.user.email
+        
+        # Normalizar email (minúsculas y sin espacios)
+        email = email.strip().lower()
         
         # Validar dominio
         if not email.endswith(f"@{allowed_domain}"):
