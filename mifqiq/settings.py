@@ -30,7 +30,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('MY_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('MY_DEBUG', cast=bool, default=False)
+DEBUG = os.getenv("MY_DEBUG", "False") == "True"
 
 # ==================== SEGURIDAD ====================
 # ALLOWED_HOSTS DEBE configurarse con los dominios reales en producción
