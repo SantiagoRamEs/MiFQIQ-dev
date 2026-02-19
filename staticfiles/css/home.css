@@ -1,0 +1,68 @@
+.information {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2;
+}
+.title-home {
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+.beneficios {
+  box-sizing: border-box;
+  margin: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-around;
+}
+h3 {
+  text-align: center;
+  font-size: 18pt;
+  margin: 0;
+}
+.card {
+  box-sizing: border-box;
+  max-width: 400px;
+  padding: 5px 15px;
+  text-align: justify;
+  border-radius: 20px;
+  background-color: white;
+}
+.title {
+  font-weight: bold;
+  color: #ffae00;
+  font-size: 15pt;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px;
+}
+.description {
+  font-size: 12pt;
+  color: black;
+  padding: 20px;
+  margin: 0;
+}
+
+.btn-inicio {
+  background-color: #00356d;
+  box-sizing: border-box;
+  width: 180px;
+  padding: 10px;
+  margin: 30px auto;
+  border-radius: 20px;
+  text-align: center;
+}
+.inicio-option {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}

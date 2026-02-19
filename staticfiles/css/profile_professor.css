@@ -1,0 +1,229 @@
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 50px;
+  color: #00356d;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.professor-photo {
+  border-radius: 50%;
+  width: 120px;
+}
+
+.info {
+  text-align: center;
+}
+.name {
+  font-size: 14pt;
+  font-weight: bold + 6;
+  font-weight: bold;
+  color: #ffc000;
+  margin: 0;
+}
+
+.cursos {
+  font-size: 10pt;
+  margin: 5px 0;
+}
+.calificacion {
+  margin: 10px auto;
+}
+.items {
+  font-weight: bold;
+  list-style: none;
+  padding: 5px;
+  margin: 0px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  font-size: 11pt;
+}
+
+.star {
+  font-size: 10pt;
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.link-calificar {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffae00;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+h3 {
+  font-size: 14pt;
+  color: black;
+  border: 10px black;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.comments-container {
+  background-color: white;
+  box-sizing: border-box;
+  max-width: 650px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  color: #00356d;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-body {
+  padding: 5px;
+}
+.comment-content {
+  background: #00000018;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10pt;
+}
+.autor,
+.fecha {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 9pt;
+  padding: 0 5px;
+}
+.fecha {
+  font-size: 8pt;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #5b6a7f;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  color: white;
+}
+
+.close {
+  color: #ffae00;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ffd000;
+}
+
+.grade-form {
+  margin-top: 20px;
+}
+
+.grade-form .form-group {
+  margin-bottom: 15px;
+}
+
+.grade-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffae00;
+  font-weight: bold;
+}
+
+.grade-form select,
+.grade-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+}
+
+.grade-form textarea {
+  min-height: 100px;
+}
+
+.btn-submit {
+  background-color: #ffae00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #ffd000;
+}
+
+.no-comments {
+  color: #00356d;
+  text-align: center;
+}
+
+/* modificar */
+.already-graded-box {
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #00356d;
+}
+
+.already-graded {
+  padding-bottom: 20px;
+  margin: 0;
+}
+.link-editar {
+  background-color: #4caf50;
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+}
+.link-calificar,
+.link-editar {
+  text-decoration: none;
+}

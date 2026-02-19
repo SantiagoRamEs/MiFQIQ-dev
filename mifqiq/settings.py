@@ -47,6 +47,10 @@ USE_X_FORWARDED_HOST = True
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://mifqiq-dev.onrender.com",
+]
+
 # Security Headers
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_SECURITY_POLICY = {
@@ -137,12 +141,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mifqiq.wsgi.application'
 
 
+
+
+
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+from dotenv import load_dotenv
 
+load_dotenv()
 
 DATABASES = {
-    'default': dj_database_url.parse('BD-CONECTION', conn_max_age=600)
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("BD_PASSWORD"),
+        "NAME": "postgres",
+        "HOST": os.getenv("BD_HOST"),
+        "PORT": "6543",
+    }
 }
 
 # Password validation
