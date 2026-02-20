@@ -157,7 +157,7 @@ DATABASES = {
         "PASSWORD": os.getenv("BD_PASSWORD"),
         "NAME": "postgres",
         "HOST": os.getenv("BD_HOST"),
-        "PORT": "5432",
+        "PORT": "6543",
     }
 }
 
