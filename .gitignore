@@ -1,5 +1,5 @@
 venv
 .env
 data.json
-media
+db.sqlite3
 .gitignore
