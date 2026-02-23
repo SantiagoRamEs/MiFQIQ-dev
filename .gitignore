@@ -3,3 +3,4 @@ venv
 data.json
 static
 db.sqlite3
+.gitignore

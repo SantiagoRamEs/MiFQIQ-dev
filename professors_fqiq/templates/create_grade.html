@@ -1,9 +1,9 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load staticfiles %}
 {% block extra_css %}
 
 <head>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/create_grade.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% staticfiles 'css/create_grade.css' %}" />
 </head>
 {% endblock %}
 {% block content %}

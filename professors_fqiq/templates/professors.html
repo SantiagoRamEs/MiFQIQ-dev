@@ -1,8 +1,8 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load staticfiles %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/base.css' %}" />
-<link rel="stylesheet" href="{% static 'css/professors.css' %}" />
+<link rel="stylesheet" href="{% staticfiles 'css/base.css' %}" />
+<link rel="stylesheet" href="{% staticfiles 'css/professors.css' %}" />
 {% endblock %}
 
 
@@ -40,7 +40,7 @@
 
     {% endfor %}
 </div>
-<script src="{% static 'javascript/search.js' %}" defer></script>
+<script src="{% staticfiles 'javascript/search.js' %}" defer></script>
 {% block extra_js %}{% endblock %}
 <div class="alternative-container">
     <p class="alternative">

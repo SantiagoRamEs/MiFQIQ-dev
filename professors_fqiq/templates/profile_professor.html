@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load staticfiles %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/profile_professor.css' %}" />
-<link rel="stylesheet" href="{% static 'css/base.css' %}" />
+<link rel="stylesheet" href="{% staticfiles 'css/profile_professor.css' %}" />
+<link rel="stylesheet" href="{% staticfiles 'css/base.css' %}" />
 {% endblock %}{% block content %}
 <div class="elements">
     <div class="card profile-card">

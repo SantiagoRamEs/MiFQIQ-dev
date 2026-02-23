@@ -1,6 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% load socialaccount %}
+{% extends 'base.html' %} {% load staticfiles %} {% load socialaccount %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+<link rel="stylesheet" href="{% staticfiles 'css/login.css' %}" />
 {% endblock%}
 
 {% block content %}
@@ -22,7 +22,8 @@
 <p class="title-login">¡Bienvenido a Mi FQIQ!</p>
 <div class="content-all">
     <div class="body-content">
-        <img class="img-fqiq" src="{% static 'img/home-fqiq.jpg' %}" alt="Facultad de Química e Ingeniería Química">
+        <img class="img-fqiq" src="{% staticfiles 'img/home-fqiq.jpg' %}"
+            alt="Facultad de Química e Ingeniería Química">
 
         <div class="login-content">
             {% if user.is_authenticated %}
