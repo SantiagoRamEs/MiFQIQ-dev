@@ -12,6 +12,7 @@ class Professor(models.Model):
         upload_to='professors_photos/',
         blank=True,
         null=True,
+        default='default.png',
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]
         )
     created = models.DateTimeField(auto_now_add=True)
