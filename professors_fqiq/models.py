@@ -7,12 +7,11 @@ from .validators import validate_image_size, validate_image_format, validate_ima
 # Tabla de profesores
 class Professor(models.Model):
     name = models.CharField(max_length=100)
-    courses = models.TextField(blank=True)
+    courses = models.TextField(blank=False)
     photo = models.ImageField(
-        upload_to='professors_photos',
+        upload_to='professors_photos/',
         blank=True,
         null=True,
-        default='professors_photos/default.png',
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]
         )
     created = models.DateTimeField(auto_now_add=True)

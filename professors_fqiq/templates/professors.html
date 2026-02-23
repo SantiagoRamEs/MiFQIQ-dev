@@ -21,8 +21,11 @@
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
 
             <div class="photo-container">
-                <img src="{{ item.professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo">
-
+                {% if profesor.foto %}
+                <img src="{{ profesor.foto.url }}">
+                {% else %}
+                <img src="{% static 'img/default.jpg' %}" alt="{{ item.professor.name }}" class="professor-photo">
+                {% endif %}
             </div>
 
             <div class="info-container">
