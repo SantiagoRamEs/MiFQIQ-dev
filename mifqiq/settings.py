@@ -218,7 +218,7 @@ LOGOUT_REDIRECT_URL = 'home'
 #adaptacion para restringir a usuarios con @unmsm.edu.pe
 SOCIALACCOUNT_ADAPTER = 'professors_fqiq.adapters.RestrictDomainSocialAccountAdapter'
 
-# ==================== LOGGING ====================
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
