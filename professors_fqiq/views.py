@@ -5,7 +5,7 @@ from django import forms
 from .forms import GradeForm
 from .models import Professor, Grade, User
 from django.contrib.auth.models import AbstractUser
-from django.db.models import Avg, F
+from django.db.models import Avg
 
 
 # Create your views here.
@@ -34,24 +34,28 @@ def custom_logout(request):
 @login_required
 def view_professors(request):
     rating_fields = [
-    'puntuality',
-    'class_environment',
-    'empathy',
-    'class_evaluation',
-    'exam_difficulty',
-    'silabo',
-    'grading_consistency',
-    'teaching_material',]
+        'puntuality',
+        'class_environment',
+        'empathy',
+        'class_evaluation',
+        'exam_difficulty',
+        'silabo',
+        'grading_consistency',
+        'teaching_material',
+    ]
 
-    #promedios por profesor
+    #promedio
     professors_qs = Professor.objects.annotate(
-        **{f'avg_{f}': Avg(f'grade__{f}') for f in rating_fields}
-    ).order_by('?')
+        **{f'avg_{f}': Avg(f'grades__{f}') for f in rating_fields}
+    ).order_by('?')  #orden aleatorio
 
     professors = []
 
     for prof in professors_qs:
+        #promedios que no sean None
         values = [getattr(prof, f'avg_{f}') for f in rating_fields if getattr(prof, f'avg_{f}') is not None]
+
+        # Calculamos promedio general
         general_avg = round(sum(values) / len(values), 1) if values else 0
         stars = '⭐' * max(0, min(int(round(general_avg)), 5))
 
@@ -60,6 +64,10 @@ def view_professors(request):
             'general_avg': general_avg,
             'stars': stars,
         })
+
+    return render(request, 'professors.html', {
+        'professors': professors,
+    })
 
 
 def login_view(request):
