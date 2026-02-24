@@ -33,31 +33,27 @@ def custom_logout(request):
 
 @login_required
 def view_professors(request):
-    
-
-    professors_qs = Professor.objects.order_by('?')
-
     rating_fields = [
-        'puntuality',
-        'class_environment',
-        'empathy',
-        'class_evaluation',
-        'exam_difficulty',
-        'silabo',
-        'grading_consistency',
-        'teaching_material',
-    ]
+    'puntuality',
+    'class_environment',
+    'empathy',
+    'class_evaluation',
+    'exam_difficulty',
+    'silabo',
+    'grading_consistency',
+    'teaching_material',
+]
+
+    #promedios por profesor
+    professors_qs = Professor.objects.annotate(
+        **{f'avg_{f}': Avg(f'grade__{f}') for f in rating_fields}
+    ).order_by('?')
 
     professors = []
 
     for prof in professors_qs:
-        agg = Grade.objects.filter(professor=prof).aggregate(
-            **{f'avg_{f}': Avg(f) for f in rating_fields}
-        )
-
-        values = [v for v in agg.values() if v is not None]
+        values = [getattr(prof, f'avg_{f}') for f in rating_fields if getattr(prof, f'avg_{f}') is not None]
         general_avg = round(sum(values) / len(values), 1) if values else 0
-
         stars = '⭐' * max(0, min(int(round(general_avg)), 5))
 
         professors.append({
@@ -66,9 +62,7 @@ def view_professors(request):
             'stars': stars,
         })
 
-    return render(request, 'professors.html', {
-        'professors': professors,
-    })
+
 def login_view(request):
     return render(request, 'login.html')
 

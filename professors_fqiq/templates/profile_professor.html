@@ -6,15 +6,14 @@
     <div class="card profile-card">
         <div class="info">
             {% if professor.photo %}
-            <img src="{{ professor.photo.url }}" alt="{{ professor.name }}" class="professor-photo">
+            <img src="{{ professor.photo.url }}" alt="{{ professor.name }}" class="professor-photo" loading="lazy">
             {% else %}
-            <img src="{% static 'img/default.png %}" alt="{{ professor.name }}" class="professor-photo">
+            <img src="{% static 'img/default.png %}" alt="{{ professor.name }}" class="professor-photo" loading="lazy">
             {% endif %}
-
-
 
             <p class="name">{{ professor.name }}</p>
             <p class="cursos">{{ professor.courses }}</p>
+
         </div>
 
         <div class="calificacion">
