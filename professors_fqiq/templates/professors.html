@@ -21,8 +21,7 @@
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
 
 
-            <img src="{{ MEDIA_URL }}{{ item.professor.photo }}" alt="{{ item.professor.name }}"
-                class="professor-photo">
+            <img src="{{ item.professor.photo }}" alt="{{ item.professor.name }}" class="professor-photo">
 
 
             <div class="info-container">
