@@ -9,7 +9,7 @@ class Professor(models.Model):
     name = models.CharField(max_length=100)
     courses = models.TextField(blank=False)
     photo = models.ImageField(
-        upload_to='',
+        upload_to="",
         blank=True,
         null=True,
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]

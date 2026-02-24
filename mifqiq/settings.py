@@ -284,7 +284,7 @@ AWS_S3_ADDRESSING_STYLE = "path"
 AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
-MEDIA_URL = f"https://{os.environ.get('PROJECT_ID')}.supabase.co/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
+AWS_S3_CUSTOM_DOMAIN = f"{os.environ.get('PROJECT_ID')}.supabase.co/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}"
 
 # Archivos multimedia
 MEDIA_URL = '/media/'
