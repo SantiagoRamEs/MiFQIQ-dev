@@ -283,4 +283,4 @@ AWS_S3_ADDRESSING_STYLE = "path"
 AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
-MEDIA_URL = f"https://{os.environ.get("PROJECT_ID")}.supabase.co/storage/v1/object/public/{'professors_photos'}/"
+MEDIA_URL = f"https://{os.environ.get("PROJECT_ID")}.supabase.co/storage/v1/object/public/'professors_photos'/"
