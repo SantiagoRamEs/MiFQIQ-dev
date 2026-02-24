@@ -19,8 +19,7 @@
 
     <div class="horizontal-card">
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
-            <img src="{{ MEDIA_URL }}{{ item.professor.photo }}" alt="{{ item.professor.name }}"
-                class="professor-photo">
+            <img src="{{ item.professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo">
             <div class="info-container">
                 <p class="name">{{ item.professor.name }}</p>
                 <div class="general-rating">
@@ -32,9 +31,8 @@
         <p class="cursos">{{ item.professor.courses }}</p>
     </div>
     {% endfor %}
-
-
 </div>
+
 <script src="{% static 'javascript/search.js' %}" defer></script>
 {% block extra_js %}{% endblock %}
 <div class="alternative-container">
