@@ -20,7 +20,7 @@
     <div class="horizontal-card">
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
 
-            {% if item.profesor.photo %}
+            {% if item.profesor.photo.url %}
             <img src="{{ item.professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo">
             {% else %}
             <img src="{% static 'img/default.png' %}" alt="{{ item.professor.name }}" class="professor-photo">
