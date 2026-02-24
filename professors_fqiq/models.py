@@ -4,6 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import Avg
 from .validators import validate_image_size, validate_image_format, validate_image_dimensions
 from django.utils.text import slugify
+import os
 
 # Tabla de profesores
 class Professor(models.Model):
