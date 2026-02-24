@@ -281,5 +281,5 @@ AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
 # Archivos multimedia
-MEDIA_URL = os.environ.get("MEDIA_URL")
+MEDIA_URL = f"https://{os.environ.get('PROJECT_ID')}.supabase.co/storage/v1/object/public/'professors_photos'/"
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
