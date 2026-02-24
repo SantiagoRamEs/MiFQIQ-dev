@@ -21,7 +21,7 @@
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
 
 
-            <img src="{{ MEDIA_URL }}{{ item.professor.photo.url }}" alt="{{ item.professor.name }}"
+            <img src="{{ MEDIA_URL }}{{ item.professor.photo }}" alt="{{ item.professor.name }}"
                 class="professor-photo">
 
 
@@ -35,9 +35,9 @@
         </a>
         <p class="cursos">{{ item.professor.courses }}</p>
     </div>
-
-
     {% endfor %}
+
+
 </div>
 <script src="{% static 'javascript/search.js' %}" defer></script>
 {% block extra_js %}{% endblock %}
