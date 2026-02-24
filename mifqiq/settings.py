@@ -287,4 +287,5 @@ AWS_DEFAULT_ACL = None
 MEDIA_URL = f"https://{os.environ.get('PROJECT_ID')}.supabase.co/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
 
 # Archivos multimedia
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
