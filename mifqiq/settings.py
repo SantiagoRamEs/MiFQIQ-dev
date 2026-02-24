@@ -102,7 +102,7 @@ AUTHENTICATION_BACKENDS = [
 
 # Configuración de login - solo con email
 ACCOUNT_LOGIN_METHODS = {'email'}
-ACCOUNT_SIGNUP_FIELDS = ['email']
+ACCOUNT_SIGNUP_FIELDS = ['email*']
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
