@@ -5,7 +5,7 @@ from django import forms
 from .forms import GradeForm
 from .models import Professor, Grade, User
 from django.contrib.auth.models import AbstractUser
-from django.db.models import Avg
+from django.db.models import Avg, F
 
 
 # Create your views here.
@@ -41,8 +41,7 @@ def view_professors(request):
     'exam_difficulty',
     'silabo',
     'grading_consistency',
-    'teaching_material',
-]
+    'teaching_material',]
 
     #promedios por profesor
     professors_qs = Professor.objects.annotate(
