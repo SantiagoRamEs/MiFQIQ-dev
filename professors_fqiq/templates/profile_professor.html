@@ -5,11 +5,7 @@
 <div class="elements">
     <div class="card profile-card">
         <div class="info">
-            {% if professor.photo %}
             <img src="{{ professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo">
-            {% else %}
-            <img src="{% static 'img/default.png' %}" alt="{{ item.professor.name }}" class="professor-photo">
-            {% endif %}
             <p class="name">{{ professor.name }}</p>
             <p class="cursos">{{ professor.courses }}</p>
         </div>
