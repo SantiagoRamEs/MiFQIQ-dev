@@ -3,13 +3,20 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import Avg
 from .validators import validate_image_size, validate_image_format, validate_image_dimensions
+from django.utils.text import slugify
 
 # Tabla de profesores
 class Professor(models.Model):
+    #photos-supabase
+    def professor_upload_path(instance, filename):
+        name, ext = os.path.splitext(filename)
+        safe_name = slugify(name)
+        return f"professor_photos/{safe_name}{ext}"
+
     name = models.CharField(max_length=100)
     courses = models.TextField(blank=False)
     photo = models.ImageField(
-        upload_to="",
+        upload_to=professor_upload_path,
         blank=True,
         null=True,
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]
