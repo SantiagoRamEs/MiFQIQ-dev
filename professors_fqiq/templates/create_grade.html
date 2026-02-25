@@ -8,21 +8,23 @@
 {% endblock %}
 {% block content %}
 
+{% if professor %}
+<h1 class="califica-a">Califica a <b>{{ professor.name }}</b></h1>
+{% else %}
+<h1 class="califica-a">Califica a</h1>
+{% endif %} {% if error %}
+<div class="error-message">{{ error }}</div>
+{% endif %}
+<div class="note">
+    <p>Antes de calificar:</p>
+    <p class="text-fill"> 🔎 Te recomendamos leer primero la descripción de cada ítem antes de marcar tu
+        calificación (al final de esta página).</p>
+    <p class="text-fill">Recuerda que cada calificación ayuda a construir una valoración justa y útil para todos.
+    </p>
+</div>
+
 <div class="container">
-    {% if professor %}
-    <h1 class="califica-a">Califica a <b>{{ professor.name }}</b></h1>
-    {% else %}
-    <h1 class="califica-a">Califica a</h1>
-    {% endif %} {% if error %}
-    <div class="error-message">{{ error }}</div>
-    {% endif %}
-    <div class="note">
-        <p>Antes de calificar:</p>
-        <p class="text-fill"> 🔎 Te recomendamos leer primero la descripción de cada ítem antes de marcar tu
-            calificación (al final de esta página).</p>
-        <p class="text-fill">Recuerda que cada calificación ayuda a construir una valoración justa y útil para todos.
-        </p>
-    </div>
+
     <form action="{% url 'creategrade' %}" method="POST">
         {% csrf_token %} {% for field in form %} {% if field.name != 'professor' %}
 
@@ -34,24 +36,24 @@
         {% else %} {{ field }} {% endif %} {% endfor %}
         <button type="submit" class="btn-submit">Enviar calificación</button>
     </form>
+</div>
 
-    <div class="description-container">
-        <p class="description-title"><b>Descripción de los ítems de calificaión</b></p>
-        <p class="description"><b>Puntualidad:</b> El profesor asiste y finaliza su clase de acuerdo al horario
-            establecido.</p>
-        <p class="description"><b>Ambiente de clase:</b> El profesor mantiene un ambiente agradable y entretenido.</p>
-        <p class="description"><b>Empatía:</b> El profesor es comprensivo con los alumnos en situaciones particulares.
-        </p>
-        <p class="description"><b>Evalúa contenidos:</b> El profesor considera lo desarrollado en clases en sus
-            prácticas y/o exámenes.</p>
-        <p class="description"><b>Facilidad de exms:</b> El profesor evalúa con pruebas fáciles de resolver.</p>
-        <p class="description"><b>Cumple el sílabo:</b> El profesor toma en cuenta los temas, sugerencias, fechas, etc
-            del silabo.</p>
-        <p class="description"><b>Coherencia en la eval:</b> El profesor asigna puntajes coherentes en la corrección de
-            las
-            evaluaciones.</p>
-        <p class="description"><b>Material didáctico:</b> El profesor proporciona diapositivas, videos, artículos, etc.
-        </p>
-    </div>
+<div class="description-container">
+    <p class="description-title"><b>Descripción de los ítems de calificaión</b></p>
+    <p class="description"><b>Puntualidad:</b> El profesor asiste y finaliza su clase de acuerdo al horario
+        establecido.</p>
+    <p class="description"><b>Ambiente de clase:</b> El profesor mantiene un ambiente agradable y entretenido.</p>
+    <p class="description"><b>Empatía:</b> El profesor es comprensivo con los alumnos en situaciones particulares.
+    </p>
+    <p class="description"><b>Evalúa contenidos:</b> El profesor considera lo desarrollado en clases en sus
+        prácticas y/o exámenes.</p>
+    <p class="description"><b>Facilidad de exms:</b> El profesor evalúa con pruebas fáciles de resolver.</p>
+    <p class="description"><b>Cumple el sílabo:</b> El profesor toma en cuenta los temas, sugerencias, fechas, etc
+        del silabo.</p>
+    <p class="description"><b>Coherencia en la eval:</b> El profesor asigna puntajes coherentes en la corrección de
+        las
+        evaluaciones.</p>
+    <p class="description"><b>Material didáctico:</b> El profesor proporciona diapositivas, videos, artículos, etc.
+    </p>
 </div>
 {% endblock %}
