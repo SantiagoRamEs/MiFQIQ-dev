@@ -1,5 +1,7 @@
 body {
   background: white;
+  display: flex;
+  flex-direction: horizontal;
 }
 /* Contenedor principal */
 .container {
