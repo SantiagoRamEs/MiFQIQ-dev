@@ -170,6 +170,7 @@ DATABASES = {
         "NAME": "postgres",
         "HOST": os.getenv("DB_HOST"),
         "PORT": "6543",
+        'CONN_MAX_AGE': 0,
     }
 }
 
