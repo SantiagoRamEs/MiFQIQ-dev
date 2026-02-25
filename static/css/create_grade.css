@@ -1,16 +1,17 @@
 body {
   background: white;
-  display: flex;
-  flex-direction: horizontal;
+}
+.info-container {
+  text-align: center;
 }
 /* Contenedor principal */
 .container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
 
 /* Estilos del formulario */
@@ -89,6 +90,7 @@ option {
 }
 
 .description-container {
+  max-width: 750px;
   text-align: justify;
   color: #00356d;
 }
