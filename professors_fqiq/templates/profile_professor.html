@@ -12,7 +12,7 @@
             {% endif %}
 
             <p class="name">{{ professor.name }}</p>
-            <p {{ professor.courses.all|join:", " }}</p>
+            <p>{{ professor.courses.all|join:", " }}</p>
 
         </div>
 
