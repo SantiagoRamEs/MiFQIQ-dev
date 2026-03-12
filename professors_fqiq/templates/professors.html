@@ -35,18 +35,18 @@
                 </div>
             </div>
         </a>
-        <p {{ professor.courses.all|join:", " }}</p>
+        <p>{{ professor.courses.all|join:", " }}</p>
     </div>
     {% endfor %}
 </div>
 
 <script src=" {% static 'javascript/search.js' %}" defer>
 </script>
-            {% block extra_js %}{% endblock %}
-        <div class="alternative-container">
-            <p class="alternative">
-                ¿No encuentras tu profe? Envía una solicitud para agregarlo
-                <a class="agregar-prof" href="https://forms.gle/SwJgqMUZAuToZ1p37">aquí.</a>
-            </p>
-        </div>
-        {% endblock %}
+{% block extra_js %}{% endblock %}
+<div class="alternative-container">
+    <p class="alternative">
+        ¿No encuentras tu profe? Envía una solicitud para agregarlo
+        <a class="agregar-prof" href="https://forms.gle/SwJgqMUZAuToZ1p37">aquí.</a>
+    </p>
+</div>
+{% endblock %}
