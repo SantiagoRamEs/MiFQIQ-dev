@@ -9,6 +9,7 @@ import os
 #Tabla de cursos
 class Course(models.Model):
     name_course = models.CharField(max_length=120)
+    ciclo = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)], null = True)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
