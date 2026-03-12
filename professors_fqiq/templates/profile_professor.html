@@ -12,11 +12,11 @@
             {% endif %}
 
             <p class="name">{{ professor.name }}</p>
-            <p class="cursos">{{ professor.courses }}</p>
+            <p {{ professor.courses.all|join:", " }}</p>
 
         </div>
 
-        <div class="calificacion">
+        <div class=" calificacion">
             <ul class="items">
                 <li>PUNTUALIDAD</li>
                 <li class="star">

@@ -6,6 +6,14 @@ from .validators import validate_image_size, validate_image_format, validate_ima
 from django.utils.text import slugify
 import os
 
+#Tabla de cursos
+class Course(models.Model):
+    name_course = models.CharField(max_length=120)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name_course
+    
 # Tabla de profesores
 class Professor(models.Model):
     #photos-supabase
@@ -15,13 +23,13 @@ class Professor(models.Model):
         return f"professor_photos/{safe_name}{ext}"
 
     name = models.CharField(max_length=100)
-    courses = models.TextField(blank=False)
     photo = models.ImageField(
         upload_to=professor_upload_path,
         blank=True,
         null=True,
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]
         )
+    courses = models.ManyToManyField(Course, related_name='professors')
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -33,18 +41,11 @@ class Professor(models.Model):
         return self.name
 
 
+
 # Tabla de calificaciones
 class Grade(models.Model):
-    professor = models.ForeignKey(
-        Professor,
-        on_delete=models.CASCADE,
-        related_name='grades'
-    )
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='grades'
-    )
+    professor = models.ForeignKey(Professor, on_delete=models.CASCADE, related_name='grades')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='grades')
     #general
     puntuality = models.PositiveSmallIntegerField(
         default=0,
