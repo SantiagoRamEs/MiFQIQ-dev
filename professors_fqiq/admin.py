@@ -1,19 +1,19 @@
 from django.contrib import admin
-from .models import Professor, Grade, Course
+from .models import Professor, Grade, Course, ProfessorCourse
+
 
 class GradeAdmin(admin.ModelAdmin):
     readonly_fields = ("created",)
 
-@admin.register(Professor)
-class ProfessorAdmin(admin.ModelAdmin):
-    readonly_fields = ("created",)
-    filter_horizontal = ('courses',)
 
 class CourseAdmin(admin.ModelAdmin):
-    readonly_field = ("created")
+    readonly_fields = ("created",)
 
-# Register your models here.
+class ProfessorAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(Grade, GradeAdmin)
 admin.site.register(Course, CourseAdmin)
-
-is_active = True
+admin.site.register(Professor, ProfessorAdmin)
+admin.site.register(ProfessorCourse)
