@@ -104,24 +104,24 @@ def create_grade(request, pc_id):
 
     if request.method == 'POST':
 
-    form = GradeForm(request.POST)
+        form = GradeForm(request.POST)
 
-    if form.is_valid():
-        grade = form.save(commit=False)
-        grade.user = request.user
-        grade.professor_course = professor_course
-        grade.save()
+        if form.is_valid():
+            grade = form.save(commit=False)
+            grade.user = request.user
+            grade.professor_course = professor_course
+            grade.save()
 
-        return redirect('profile_professor', pk=professor.id)
+            return redirect('profile_professor', pk=professor.id)
 
-else:
-    form = GradeForm()
+    else:
+        form = GradeForm()
 
-return render(request, 'create_grade.html', {
-    'form': form,
-    'professor_course': professor_course,
-    'professor': professor
-})    
+    return render(request, 'create_grade.html', {
+        'form': form,
+        'professor_course': professor_course,
+        'professor': professor
+    })    
 
 
 
