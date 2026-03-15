@@ -54,7 +54,7 @@ class Professor(models.Model):
 
     #promedios
     def average_ratings(self):
-        return self.grades.aggregate(
+        return Grade.objects.filter(professorcourse__professor=self).aggregate(
             avg_puntuality=Avg('puntuality'),
             avg_silabo=Avg('silabo'),
             avg_exam_difficulty=Avg('exam_difficulty'),
@@ -149,4 +149,4 @@ class Grade(models.Model):
         ]
 
     def __str__(self):
-        return f'{self.user.username} →  {self.professorourse}'
+        return f'{self.user.username} →  {self.professorcourse}'
