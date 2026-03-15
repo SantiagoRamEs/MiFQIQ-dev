@@ -12,13 +12,10 @@ urlpatterns =[
     path('professors/', views.view_professors, name = 'professors'),
     path('professors/<int:professor_id>/', views.profile_professor, name = 'profile_professor'),
 
-    path('creategrade/', views.create_grade, name = 'creategrade'),
-    path('editgrade/<int:professor_id>/', views.editgrade, name='editgrade'),
+    path('grade/create/<int:pc_id>/',views.create_grade,name='creategrade'),
+    path('grade/edit/<int:grade_id>/',views.edit_grade,name='editgrade'),
     
     path('mis-calificaciones/', views.my_grades, name = 'my_grades'),
     path('my-grades/delete/<int:grade_id>/', views.delete_grade, name='delete_grade'),
-
-
-    
 ]
 

@@ -2,21 +2,53 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/create_grade.css' %}" />
-<link rel="stylesheet" href="{% static 'css/edit_grade.css' %}" />
+<link rel="stylesheet" href="{% static 'css/create_grade.css' %}">
+<link rel="stylesheet" href="{% static 'css/edit_grade.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2 class="edita-a">Editar tu calificación para <b>{{ professor.name }}</b></h2>
 
-    <form method="post">
+<div class="container">
+
+    <h2 class="edita-a">
+        Editar tu calificación para <b>{{ professor.name }}</b>
+    </h2>
+
+    <p class="course-name">
+        Curso: <b>{{ course.name_course }}</b>
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {% for field in form %}
         <div class="form-group">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn-guardar">Guardar cambios</button><br>
-            <a href="{% url 'profile_professor' professor.id %}" class="btn-cancelar">Cancelar</a>
+
+            {{ field.label_tag }}
+            {{ field }}
+
+            {% if field.errors %}
+            <div class="error">
+                {{ field.errors }}
+            </div>
+            {% endif %}
+
         </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-guardar">
+            Guardar cambios
+        </button>
+
+        <br>
+
+        <a href="{% url 'profile_professor' professor.id %}" class="btn-cancelar">
+            Cancelar
+        </a>
+
     </form>
+
 </div>
+
 {% endblock %}

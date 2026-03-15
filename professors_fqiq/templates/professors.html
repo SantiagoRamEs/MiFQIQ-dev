@@ -1,9 +1,9 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/professors.css' %}" />
 {% endblock %}
-
 
 {% block content %}
 
@@ -18,7 +18,9 @@
     {% for item in professors %}
 
     <div class="horizontal-card">
+
         <a href="{% url 'profile_professor' item.professor.id %}" class="professor-link horizontal-link">
+
             {% if item.professor.photo %}
             <img src="{{ item.professor.photo.url }}" alt="{{ item.professor.name }}" class="professor-photo"
                 loading="lazy">
@@ -29,24 +31,37 @@
 
             <div class="info-container">
                 <p class="name">{{ item.professor.name }}</p>
+
                 <div class="general-rating">
                     <span class="stars">{{ item.stars }}</span>
                     <span class="avg">({{ item.general_avg }})</span>
                 </div>
             </div>
+
         </a>
-        <p class="cursos">{{ item.professor.courses.all|join:", " }}</p>
+
+        <p class="cursos">
+            {% for pc in item.professor.courses_taught.all %}
+            {{ pc.course.name_course }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+            Sin cursos registrados
+            {% endfor %}
+        </p>
+
     </div>
+
     {% endfor %}
 </div>
 
-<script src=" {% static 'javascript/search.js' %}" defer>
-</script>
+<script src="{% static 'javascript/search.js' %}" defer></script>
+
 {% block extra_js %}{% endblock %}
+
 <div class="alternative-container">
     <p class="alternative">
         ¿No encuentras tu profe? Envía una solicitud para agregarlo
         <a class="agregar-prof" href="https://forms.gle/SwJgqMUZAuToZ1p37">aquí.</a>
     </p>
 </div>
+
 {% endblock %}

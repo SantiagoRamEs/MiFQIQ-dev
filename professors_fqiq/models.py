@@ -8,9 +8,19 @@ import os
 
 #Tabla de cursos
 class Course(models.Model):
+
     name_course = models.CharField(max_length=120)
-    ciclo = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)], null = True)
+
+    ciclo = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(10)],
+        null=True,
+        blank= True
+        )
+
     created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['ciclo', 'name_course']
 
     def __str__(self):
         return self.name_course
@@ -24,13 +34,14 @@ class Professor(models.Model):
         return f"professor_photos/{safe_name}{ext}"
 
     name = models.CharField(max_length=100)
+
     photo = models.ImageField(
         upload_to=professor_upload_path,
         blank=True,
         null=True,
         validators=[validate_image_size, validate_image_format, validate_image_dimensions]
         )
-    courses = models.ManyToManyField(Course, related_name='professors')
+    
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -41,13 +52,55 @@ class Professor(models.Model):
     def __str__(self):
         return self.name
 
+    #promedios
+    def average_ratings(self):
+        return self.grades.aggregate(
+            avg_puntuality=Avg('puntuality'),
+            avg_silabo=Avg('silabo'),
+            avg_exam_difficulty=Avg('exam_difficulty'),
+            avg_empathy=Avg('empathy'),
+            avg_class_environment=Avg('class_environment'),
+            avg_class_evaluation=Avg('class_evaluation'),
+            avg_grading_consistency=Avg('grading_consistency'),
+            avg_teaching_material=Avg('teaching_material'),
+        )
 
+
+class ProfessorCourse(models.Model):
+    professor = models.ForeignKey(
+        Professor,
+        on_delete=models.CASCADE,
+        related_name = 'courses_taught'
+    )
+
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='professors'
+    )
+
+    class Meta:
+        unique_together = ['professor', 'course']
+        ordering = ['professor']
+
+    def __str__(self):
+        return f"{self.professor.name} - {self.course.name_course}"
 
 # Tabla de calificaciones
 class Grade(models.Model):
-    professor = models.ForeignKey(Professor, on_delete=models.CASCADE, related_name='grades')
-    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='grades')
-    #general
+    professorcourse = models.ForeignKey(
+        ProfessorCourse,
+        on_delete=models.CASCADE,
+        related_name='grades'
+        )
+    
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='grades'
+        )
+    #items
+
     puntuality = models.PositiveSmallIntegerField(
         default=0,
         validators=[MinValueValidator(0), MaxValueValidator(5)]
@@ -85,19 +138,15 @@ class Grade(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    def get_average_rating(self):
-        grades = self.grades.all()
-        if not grades:
-            return 0
-        return grades.aggregate(Avg('puntuality'))['puntuality__avg']
-
     class Meta:
         verbose_name = 'Grade'
         verbose_name_plural = 'Grades'
         ordering = ['-created']
         constraints = [
-            models.UniqueConstraint(fields=['professor', 'user'], name='unique_professor_user')
+            models.UniqueConstraint(
+                fields=['professorcourse', 'user'], name='unique_professorcourse_user'
+                )
         ]
 
     def __str__(self):
-        return f'{self.user.username} → {self.professor.name}'
+        return f'{self.user.username} →  {self.professorourse}'

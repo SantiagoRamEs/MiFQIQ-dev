@@ -3,28 +3,29 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django import forms
 from .forms import GradeForm
-from .models import Professor, Grade, User
+from .models import Professor, Grade, User, ProfessorCourse
 from django.contrib.auth.models import AbstractUser
-from django.db.models import Avg
+from django.db.models import Avg, Count
 
 
 # Create your views here.
 @login_required
 def my_grades(request):
-    grades = Grade.objects.filter(user=request.user).order_by('-created')
-    
-    return render(request,'my_grades.html',{
+
+    grades = (
+        Grade.objects
+        .filter(user=request.user)
+        .select_related(
+            'professor_course__professor',
+            'professor_course__course'
+        )
+        .order_by('-created')
+    )
+
+    return render(request, 'my_grades.html', {
         'grades': grades,
     })
 
-@login_required
-def delete_grade(request, grade_id):
-    grade = get_object_or_404(Grade, id=grade_id, user=request.user)
-
-    if request.method == "POST":
-        grade.delete()
-
-    return redirect('my_grades')
 
 @login_required
 def custom_logout(request):
@@ -33,6 +34,7 @@ def custom_logout(request):
 
 @login_required
 def view_professors(request):
+
     rating_fields = [
         'puntuality',
         'class_environment',
@@ -44,18 +46,20 @@ def view_professors(request):
         'teaching_material',
     ]
 
-    #promedio
     professors_qs = Professor.objects.annotate(
-        **{f'avg_{f}': Avg(f'grades__{f}') for f in rating_fields}
-    ).order_by('?')  #orden aleatorio
+        **{f'avg_{f}': Avg(f'courses_taught__grades__{f}') for f in rating_fields}
+    ).order_by('?')
 
     professors = []
 
     for prof in professors_qs:
-        #promedios que no sean None
-        values = [getattr(prof, f'avg_{f}') for f in rating_fields if getattr(prof, f'avg_{f}') is not None]
 
-        # Calculamos promedio general
+        values = [
+            getattr(prof, f'avg_{f}')
+            for f in rating_fields
+            if getattr(prof, f'avg_{f}') is not None
+        ]
+
         general_avg = round(sum(values) / len(values), 1) if values else 0
         stars = '⭐' * max(0, min(int(round(general_avg)), 5))
 
@@ -69,7 +73,6 @@ def view_professors(request):
         'professors': professors,
     })
 
-
 def login_view(request):
     return render(request, 'login.html')
 
@@ -78,99 +81,153 @@ def form_valid(self, form):
     return super().form_valid(form)
 
 #CREAR UNA CALIFICACIÓN          
-@login_required
-def create_grade(request):
-    prof_id = request.GET.get('professor') or request.POST.get('professor')
-    professor = get_object_or_404(Professor, id=prof_id) if prof_id else None
-    if request.method == 'GET':
-        form = GradeForm(initial={'professor': professor.id} if professor else None)
-        if professor:
-            form.fields['professor'].widget = forms.HiddenInput()
-        return render(request, 'create_grade.html',{
-            'form': form,
-            'professor': professor
-        })
-    else:
-        try:
-            form = GradeForm(request.POST)
-            if professor:
-                form.fields['professor'].widget = forms.HiddenInput()
-            new_grade = form.save(commit=False)
-            new_grade.user = request.user
-            new_grade.save()
-            return redirect('profile_professor', professor_id=professor.id) #redirecciona al mismo perfil del docente
-        except Exception:
-            return render(request,'create_grade.html', {
-                'form': form,
-                'professor': professor,
-                'error': 'Please provide valid data'
-            })
-        
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, redirect, render
+from .models import ProfessorCourse, Grade
 
 
 @login_required
-def profile_professor(request, professor_id):
-    professor = get_object_or_404(Professor, id=professor_id)
-    grades = Grade.objects.filter(professor=professor).order_by('-created')
+def create_grade(request, pc_id):
 
-    # Filtro de comentarios
-    has_comments = grades.filter(comment__isnull=False).exclude(comment__exact='').exists()
+    professor_course = get_object_or_404(ProfessorCourse, id=pc_id)
 
-    # Verificar si el usuario ya calificó a este profesor
-    user_already_graded = False
-    if request.user.is_authenticated:
-        user_already_graded = Grade.objects.filter(professor=professor, user=request.user).exists()
+    professor = professor_course.professor
 
-    # Calcular estadísticas (mantienes tu lógica actual)
-    agg = grades.aggregate(
-        avg_puntuality=Avg('puntuality'),
-        avg_silabo=Avg('silabo'),
-        avg_exam_difficulty=Avg('exam_difficulty'),
-        avg_empathy=Avg('empathy'),
-        avg_class_environment=Avg('class_environment'),
-        avg_class_evaluation=Avg('class_evaluation'),
-        avg_grading_consistency=Avg('grading_consistency'),
-        avg_teaching_material=Avg('teaching_material'),
-    )
+    # evitar que el usuario califique el mismo curso dos veces
+    already_graded = Grade.objects.filter(
+        professor_course=professor_course,
+        user=request.user
+    ).exists()
 
-    def to_number(v):
-        return round(v or 0, 1)
+    if already_graded:
+        return redirect('profile_professor', pk=professor.id)
 
-    def to_stars(v):
-        n = int(round(v or 0))
-        return '⭐' * max(0, min(n, 5))
+    if request.method == 'POST':
+
+        Grade.objects.create(
+            professor_course=professor_course,
+            user=request.user,
+            puntuality=request.POST.get('puntuality'),
+            class_environment=request.POST.get('class_environment'),
+            empathy=request.POST.get('empathy'),
+            class_evaluation=request.POST.get('class_evaluation'),
+            exam_difficulty=request.POST.get('exam_difficulty'),
+            silabo=request.POST.get('silabo'),
+            grading_consistency=request.POST.get('grading_consistency'),
+            teaching_material=request.POST.get('teaching_material'),
+            comment=request.POST.get('comment'),
+        )
+
+        return redirect('profile_professor', pk=professor.id)
+
+    return render(request, 'create_grade.html', {
+        'professor_course': professor_course,
+        'professor': professor
+    })    
+
+
+
+
+#PERFIL DE PROFESOR
+def profile_professor(request, pk):
+
+    professor = get_object_or_404(Professor, pk=pk)
+
+    rating_fields = [
+        'puntuality',
+        'class_environment',
+        'empathy',
+        'class_evaluation',
+        'exam_difficulty',
+        'silabo',
+        'grading_consistency',
+        'teaching_material',
+    ]
+
+    # PROMEDIO GENERAL
+    grades = Grade.objects.filter(professor_course__professor=professor)
 
     stats = {}
-    for field in ['puntuality', 'silabo', 'exam_difficulty', 'empathy', 'class_environment',
-                  'class_evaluation', 'grading_consistency', 'teaching_material']:
-        avg_value = agg.get(f'avg_{field}')
-        stats[f'avg_{field}'] = to_number(avg_value)
-        stats[f'stars_{field}'] = to_stars(avg_value)
+    for field in rating_fields:
+        avg = grades.aggregate(avg=Avg(field))['avg']
+        stats[f'avg_{field}'] = round(avg, 2) if avg else None
 
-    return render(request, 'profile_professor.html', {
-        'professor': professor,
-        'grades': grades,
-        'stats': stats,
-        'has_comments': has_comments,
-        'user_already_graded': user_already_graded,  # 👈 añadimos esto
+    # CURSOS DEL PROFESOR
+    courses = ProfessorCourse.objects.filter(
+        professor=professor
+    ).select_related('course')
+
+    course_stats = []
+
+    for pc in courses:
+
+        course_grades = Grade.objects.filter(professor_course=pc)
+
+        data = {
+            "pc": pc,
+            "total_grades": course_grades.count()
+        }
+
+        for field in rating_fields:
+            avg = course_grades.aggregate(avg=Avg(field))['avg']
+            data[f'avg_{field}'] = round(avg, 2) if avg else None
+
+        # si el usuario ya calificó ese curso
+        user_graded = False
+        if request.user.is_authenticated:
+            user_graded = Grade.objects.filter(
+                user=request.user,
+                professor_course=pc
+            ).exists()
+
+        data["user_graded"] = user_graded
+
+        course_stats.append(data)
+
+    # comentarios
+    grades_with_comments = grades.exclude(comment="")
+
+    return render(request, "profile_professor.html", {
+        "professor": professor,
+        "stats": stats,
+        "courses": course_stats,
+        "grades": grades_with_comments,
+        "has_comments": grades_with_comments.exists()
     })
 
 @login_required
-def editgrade(request, professor_id):
-    professor = get_object_or_404(Professor, id=professor_id)
-    grade = get_object_or_404(Grade, professor=professor, user=request.user)
+def edit_grade(request, grade_id):
+
+    grade = get_object_or_404(
+        Grade,
+        id=grade_id,
+        user=request.user
+    )
+
+    professor = grade.professor_course.professor
+    course = grade.professor_course.course
 
     if request.method == "POST":
         form = GradeForm(request.POST, instance=grade)
+
         if form.is_valid():
             form.save()
-            return redirect('profile_professor', professor_id=professor.id)
+            return redirect('profile_professor', pk=professor.id)
+
     else:
         form = GradeForm(instance=grade)
-        form.fields['professor'].widget = forms.HiddenInput()
 
     return render(request, 'edit_grade.html', {
         'form': form,
-        'professor': professor
+        'professor': professor,
+        'course': course
     })
 
+@login_required
+def delete_grade(request, grade_id):
+    grade = get_object_or_404(Grade, id=grade_id, user=request.user)
+
+    if request.method == "POST":
+        grade.delete()
+
+    return redirect('my_grades')
