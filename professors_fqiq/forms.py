@@ -7,7 +7,7 @@ class GradeForm(forms.ModelForm):
 
     class Meta:
         model = Grade
-        fields = ['professor', 'puntuality', 'class_environment', 'empathy', 'class_evaluation', 'exam_difficulty', 'silabo',  'grading_consistency', 'teaching_material', 'comment']
+        fields = ['puntuality', 'class_environment', 'empathy', 'class_evaluation', 'exam_difficulty', 'silabo',  'grading_consistency', 'teaching_material', 'comment']
         labels = {
             'professor': 'Profesor',
             'puntuality': 'Puntualidad',
