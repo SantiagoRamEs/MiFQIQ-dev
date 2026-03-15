@@ -10,7 +10,7 @@ urlpatterns =[
     path('logout/', views.custom_logout, name='logout'),
 
     path('professors/', views.view_professors, name = 'professors'),
-    path('professors/<int:professor_id>/', views.profile_professor, name = 'profile_professor'),
+    path('professors/<int:pk>/', views.profile_professor, name = 'profile_professor'),
 
     path('grade/create/<int:pc_id>/',views.create_grade,name='creategrade'),
     path('grade/edit/<int:grade_id>/',views.edit_grade,name='editgrade'),

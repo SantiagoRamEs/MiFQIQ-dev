@@ -16,8 +16,8 @@ def my_grades(request):
         Grade.objects
         .filter(user=request.user)
         .select_related(
-            'professor_course__professor',
-            'professor_course__course'
+            'professorcourse__professor',
+            'professorcourse__course'
         )
         .order_by('-created')
     )
@@ -81,11 +81,6 @@ def form_valid(self, form):
     return super().form_valid(form)
 
 #CREAR UNA CALIFICACIÓN          
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404, redirect, render
-from .models import ProfessorCourse, Grade
-
-
 @login_required
 def create_grade(request, pc_id):
 
