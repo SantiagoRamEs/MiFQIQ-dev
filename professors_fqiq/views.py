@@ -138,7 +138,7 @@ def profile_professor(request, pk):
     ]
 
     # PROMEDIO GENERAL
-    grades = Grade.objects.filter(professor_course__professor=professor)
+    grades = Grade.objects.filter(professorcourse__professor=professor)
 
     stats = {}
     for field in rating_fields:
@@ -154,7 +154,7 @@ def profile_professor(request, pk):
 
     for pc in courses:
 
-        course_grades = Grade.objects.filter(professor_course=pc)
+        course_grades = Grade.objects.filter(professorcourse=pc)
 
         data = {
             "pc": pc,
