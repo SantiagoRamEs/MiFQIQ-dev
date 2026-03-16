@@ -14,12 +14,105 @@
 
         <!-- PERFIL PROFESOR -->
         <div class="profile-card">
-            ...
+            <div class="info">
+
+                {% if professor.photo %}
+                <img src="{{ professor.photo.url }}" alt="{{ professor.name }}" class="professor-photo">
+                {% else %}
+                <img src="{% static 'img/default.png' %}" alt="{{ professor.name }}" class="professor-photo">
+                {% endif %}
+
+                <p class="name">{{ professor.name }}</p>
+
+                <p class="courses">
+                    {% for pc in professor.coursestaught.all %}
+                    {{ pc.course.name_course }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+
+            </div>
+
+            <div class="calificacion">
+
+                <ul class="items">
+                    <li>PUNTUALIDAD</li>
+                    <li class="star">{{ stats.avg_puntuality }}</li>
+                </ul>
+                <ul class="items">
+                    <li>AMBIENTE DE CLASE</li>
+                    <li class="star">{{ stats.avg_class_environment }}</li>
+                </ul>
+                <ul class="items">
+                    <li>EMPATÍA</li>
+                    <li class="star">{{ stats.avg_empathy }}</li>
+                </ul>
+                <ul class="items">
+                    <li>EVALÚA CONTENIDOS</li>
+                    <li class="star">{{ stats.avg_class_evaluation }}</li>
+                </ul>
+                <ul class="items">
+                    <li>FACILIDAD DE EXMS</li>
+                    <li class="star">{{ stats.avg_exam_difficulty }}</li>
+                </ul>
+                <ul class="items">
+                    <li>CUMPLE EL SILABO</li>
+                    <li class="star">{{ stats.avg_silabo }}</li>
+                </ul>
+                <ul class="items">
+                    <li>COHERENCIA EN CALIF.</li>
+                    <li class="star">{{ stats.avg_grading_consistency }}</li>
+                </ul>
+                <ul class="items">
+                    <li>MATERIAL DIDÁCTICO</li>
+                    <li class="star">{{ stats.avg_teaching_material }}</li>
+                </ul>
+
+            </div>
         </div>
 
         <!-- COMENTARIOS -->
         <div class="comments-section">
-            ...
+            <h3>¿Qué opinan tus compañeros acerca de este profesor?</h3>
+
+            <div class="comments-container">
+
+                {% if has_comments %}
+
+                {% for grade in grades %}
+
+                <article class="comment">
+
+                    <div class="comment-body">
+
+                        <div class="comment-header">
+                            <div class="autor">
+                                {{ grade.user.first_name }} {{ grade.user.last_name }}
+                            </div>
+
+                            <div class="fecha">
+                                {{ grade.created|date:"d/m/Y" }}
+                            </div>
+                        </div>
+
+                        <div class="comment-content">
+                            {{ grade.comment }}
+                        </div>
+
+                    </div>
+
+                </article>
+
+                {% endfor %}
+
+                {% else %}
+
+                <p class="no-comments">
+                    Aún no hay comentarios para este profesor.
+                </p>
+
+                {% endif %}
+
+            </div>
         </div>
 
     </div>
