@@ -43,16 +43,16 @@
 /* SECCIÓN CURSOS */
 
 .courses-section {
-  flex-basis: 100%; /* fuerza nueva fila */
+  flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .course-card {
   width: 280px;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 /* PROFESOR */
@@ -119,6 +119,7 @@
 
 .link-calificar:hover {
   background-color: #ffd000;
+  text-align: center;
 }
 
 .link-editar {
