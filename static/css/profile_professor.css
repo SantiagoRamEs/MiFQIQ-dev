@@ -43,7 +43,6 @@
 /* SECCIÓN CURSOS */
 
 .courses-section {
-  flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -51,8 +50,13 @@
 }
 
 .course-card {
-  width: 280px;
+  background-color: white;
+  max-width: 300px;
   border-radius: 15px;
+  font-size: 10pt;
+}
+h4 {
+  text-align: center;
 }
 
 /* PROFESOR */
@@ -113,7 +117,6 @@
   background-color: #ffae00;
   padding: 10px 20px;
   border-radius: 20px;
-  display: inline-block;
   margin-top: 10px;
 }
 
@@ -128,7 +131,7 @@
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  display: inline-block;
+  text-align: center;
   margin-top: 10px;
 }
 
