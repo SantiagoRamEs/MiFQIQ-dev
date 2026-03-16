@@ -170,7 +170,7 @@ def profile_professor(request, pk):
         if request.user.is_authenticated:
             user_graded = Grade.objects.filter(
                 user=request.user,
-                professor_course=pc
+                professorcourse=pc
             ).exists()
 
         data["user_graded"] = user_graded
