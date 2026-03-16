@@ -11,63 +11,6 @@
 
 /* TARJETAS */
 
-.card {
-  flex: 1 1 320px;
-  max-width: 350px;
-  padding: 15px;
-  background-color: white;
-  border-radius: 20px;
-  color: #00356d;
-}
-
-/* PERFIL PROFESOR */
-
-.profile-card {
-  flex: 0 0 350px;
-}
-
-/* SECCIÓN COMENTARIOS */
-
-.comments-section {
-  flex: 1 1 500px;
-  max-width: 600px;
-}
-
-.comments-container {
-  background-color: white;
-  border-radius: 10px;
-  padding: 15px;
-  color: #00356d;
-}
-
-/* SECCIÓN CURSOS */
-
-.courses-section {
-  flex-basis: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.course-card {
-  flex: 0 1 280px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 15px;
-  color: #00356d;
-  font-size: 10pt;
-}
-h4 {
-  text-align: center;
-}
-
 /* PROFESOR */
 
 .professor-photo {
@@ -115,6 +58,54 @@ h4 {
   font-size: 8pt;
   text-align: center;
   margin-top: 10px;
+}
+
+/* PERFIL PROFESOR */
+
+.profile-card {
+  max-width: 350px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 15px;
+  color: #00356d;
+}
+
+/* SECCIÓN COMENTARIOS */
+
+.comments-section {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.comments-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  color: #00356d;
+}
+
+/* SECCIÓN CURSOS */
+
+.courses-section {
+  padding: 20px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.course-card {
+  flex: 0 1 280px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  color: #00356d;
+  font-size: 10pt;
+}
+h4 {
+  text-align: center;
 }
 
 /* BOTONES */
@@ -191,6 +182,7 @@ h3 {
 .no-comments {
   color: #00356d;
   text-align: center;
+  padding: 0;
 }
 
 /* RESPONSIVE */
