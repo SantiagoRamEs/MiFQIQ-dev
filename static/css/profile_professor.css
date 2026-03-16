@@ -1,17 +1,18 @@
 .elements {
-  width: max-content;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px 15px;
-  margin-top: 20px;
 }
 
 /* TARJETAS */
 
 .card {
-  width: 100%;
+  flex: 1 1 320px;
   max-width: 350px;
   padding: 15px;
   background-color: white;
@@ -19,12 +20,13 @@
   color: #00356d;
 }
 
-/* TARJETAS DE CURSOS */
+/* SECCIÓN CURSOS */
 
 .courses-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1 1 350px;
 }
 
 .course-card {
@@ -32,11 +34,6 @@
 }
 
 /* PROFESOR */
-
-.img-container {
-  display: flex;
-  justify-content: center;
-}
 
 .professor-photo {
   border-radius: 50%;
@@ -71,7 +68,6 @@
   padding: 5px;
   margin: 0;
   display: flex;
-  gap: 10px;
   justify-content: space-between;
   font-size: 11pt;
 }
@@ -87,12 +83,6 @@
 }
 
 /* BOTONES */
-
-.action-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-}
 
 .link-calificar {
   color: white;
@@ -135,12 +125,12 @@ h3 {
 /* COMENTARIOS */
 
 .comments-section {
-  max-width: 520px;
+  flex: 1 1 450px;
+  max-width: 600px;
 }
 
 .comments-container {
   background-color: white;
-  max-width: 650px;
   border-radius: 10px;
   padding: 15px;
   color: #00356d;
@@ -180,16 +170,37 @@ h3 {
   text-align: center;
 }
 
-/* ESTADO YA CALIFICADO */
+/* RESPONSIVE */
 
-.already-graded-box {
-  padding-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  color: #00356d;
+@media (max-width: 900px) {
+  .elements {
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 500px;
+  }
+
+  .courses-section {
+    width: 100%;
+  }
 }
 
-.already-graded {
-  padding-bottom: 10px;
-  margin: 0;
+@media (max-width: 600px) {
+  .items {
+    font-size: 10pt;
+  }
+
+  .professor-photo {
+    width: 90px;
+  }
+
+  .name {
+    font-size: 13pt;
+  }
+
+  h3 {
+    font-size: 12pt;
+  }
 }
