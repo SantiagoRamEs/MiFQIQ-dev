@@ -23,7 +23,7 @@
             <p class="name">{{ professor.name }}</p>
 
             <p class="courses">
-                {% for pc in professor.courses_taught.all %}
+                {% for pc in professor.coursestaught.all %}
                 {{ pc.course.name_course }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
