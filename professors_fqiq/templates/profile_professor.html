@@ -10,7 +10,7 @@
 <div class="elements">
 
     <!-- TARJETA PROFESOR -->
-    <div class="card profile-card">
+    <div class="profile-card">
 
         <div class="info">
 
@@ -131,9 +131,10 @@
 
     <h3>Calificaciones por curso</h3>
 
-    {% for c in courses %}
     <div class="cards">
-        <div class="course-card">
+
+        {% for c in courses %}
+        <div class="card course-card">
 
             <h4>{{ c.pc.course.name_course }}</h4>
 
@@ -177,25 +178,26 @@
                 <li class="star">{{ c.avg_teaching_material }}</li>
             </ul>
 
-
             <p class="total-grades">
                 {{ c.total_grades }} evaluaciones
             </p>
 
             {% if user.is_authenticated %}
-
             {% if c.user_graded %}
-            <a href="{% url 'editgrade' c.grade_id %}" class="link-editar">Editar mi calificación</a>
+            <a href="{% url 'editgrade' c.grade_id %}" class="link-editar">
+                Editar mi calificación
+            </a>
             {% else %}
-            <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">Calificar este curso</a>
+            <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">
+                Calificar este curso
+            </a>
             {% endif %}
-
             {% endif %}
 
         </div>
+        {% endfor %}
 
     </div>
-    {% endfor %}
 
 </div>
 
