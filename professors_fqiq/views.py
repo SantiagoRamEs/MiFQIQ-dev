@@ -47,7 +47,7 @@ def view_professors(request):
     ]
 
     professors_qs = Professor.objects.annotate(
-        **{f'avg_{f}': Avg(f'courses_taught__grades__{f}') for f in rating_fields}
+        **{f'avg_{f}': Avg(f'coursestaught__grades__{f}') for f in rating_fields}
     ).order_by('?')
 
     professors = []
