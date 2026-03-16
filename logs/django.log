@@ -432,3 +432,33 @@ ERROR 2026-02-18 19:17:18,084 basehttp You're accessing the development server o
 ERROR 2026-02-18 19:17:18,085 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
 ERROR 2026-02-18 19:17:33,021 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
 ERROR 2026-02-18 19:17:33,026 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-15 19:02:09,783 log Invalid HTTP_HOST header: '127.0.0.1:9000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:9000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-15 19:02:09,893 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-15 19:02:09,970 log Invalid HTTP_HOST header: '127.0.0.1:9000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:9000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-15 19:02:09,972 basehttp "GET /favicon.ico HTTP/1.1" 400 143
