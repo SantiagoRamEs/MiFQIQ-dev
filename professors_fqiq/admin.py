@@ -24,7 +24,6 @@ class CourseAdmin(admin.ModelAdmin):
     readonly_fields = ("created",)
 
 
-admin.site.register(Grade, GradeAdmin)
-admin.site.register(Course, CourseAdmin)
 admin.site.register(Professor, ProfessorAdmin)
-admin.site.register(ProfessorCourse)
+admin.site.register(Course)
+admin.site.register(Grade)
