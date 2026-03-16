@@ -43,21 +43,25 @@
 /* SECCIÓN CURSOS */
 
 .courses-section {
+  flex-basis: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .course-card {
+  flex: 0 1 280px;
   background-color: white;
-  max-width: 300px;
   border-radius: 15px;
+  padding: 15px;
+  color: #00356d;
   font-size: 10pt;
 }
 h4 {
