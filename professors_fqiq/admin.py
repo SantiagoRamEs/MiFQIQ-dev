@@ -28,5 +28,5 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Professor, ProfessorAdmin)
-admin.site.register(Course)
-admin.site.register(Grade)
+admin.site.register(CourseAdmin)
+admin.site.register(GradeAdmin)
