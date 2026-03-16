@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="{% static 'css/create_grade.css' %}">
 {% endblock %}
 
@@ -19,10 +18,19 @@
     </p>
 
     {% if error %}
-    <div class="error-message">{{ error }}</div>
+    <div class="error-message">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    {% if form.non_field_errors %}
+    <div class="error-message">
+        {{ form.non_field_errors }}
+    </div>
     {% endif %}
 
     <div class="note">
+
         <p>Antes de calificar:</p>
 
         <p class="text-fill">
@@ -33,6 +41,7 @@
         <p class="text-fill">
             Recuerda que cada calificación ayuda a construir una valoración justa y útil para todos.
         </p>
+
     </div>
 
 </div>
@@ -41,9 +50,11 @@
 <div class="container">
 
     <form method="POST">
+
         {% csrf_token %}
 
         {% for field in form %}
+
         <div class="form-group">
 
             {{ field.label_tag }}
@@ -56,6 +67,7 @@
             {% endif %}
 
         </div>
+
         {% endfor %}
 
         <button type="submit" class="btn-submit">

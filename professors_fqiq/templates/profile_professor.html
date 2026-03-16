@@ -116,13 +116,9 @@
             {% if user.is_authenticated %}
 
             {% if c.user_graded %}
-            <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">
-                Editar mi calificación
-            </a>
+            <a href="{% url 'editgrade' c.grade_id %}" class="link-editar">Editar mi calificación</a>
             {% else %}
-            <a href="{% url 'creategrade' %}?pc={{ c.pc.id }}" class="link-calificar">
-                Calificar este curso
-            </a>
+            <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">Calificar este curso</a>
             {% endif %}
 
             {% endif %}
