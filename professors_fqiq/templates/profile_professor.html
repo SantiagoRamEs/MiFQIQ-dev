@@ -132,68 +132,70 @@
     <h3>Calificaciones por curso</h3>
 
     {% for c in courses %}
+    <div class="cards">
+        <div class="course-card">
 
-    <div class="course-card">
+            <h4>{{ c.pc.course.name_course }}</h4>
 
-        <h4>{{ c.pc.course.name_course }}</h4>
+            <ul class="items">
+                <li>PUNTUALIDAD</li>
+                <li class="star">{{ c.avg_puntuality }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>PUNTUALIDAD</li>
-            <li class="star">{{ c.avg_puntuality }}</li>
-        </ul>
+            <ul class="items">
+                <li>AMBIENTE DE CLASE</li>
+                <li class="star">{{ c.avg_class_environment }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>AMBIENTE DE CLASE</li>
-            <li class="star">{{ c.avg_class_environment }}</li>
-        </ul>
+            <ul class="items">
+                <li>EMPATÍA</li>
+                <li class="star">{{ c.avg_empathy }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>EMPATÍA</li>
-            <li class="star">{{ c.avg_empathy }}</li>
-        </ul>
+            <ul class="items">
+                <li>EVALÚA CONTENIDOS</li>
+                <li class="star">{{ c.avg_class_evaluation }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>EVALÚA CONTENIDOS</li>
-            <li class="star">{{ c.avg_class_evaluation }}</li>
-        </ul>
+            <ul class="items">
+                <li>FACILIDAD DE EXM</li>
+                <li class="star">{{ c.avg_exam_difficulty }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>FACILIDAD DE EXM</li>
-            <li class="star">{{ c.avg_exam_difficulty }}</li>
-        </ul>
+            <ul class="items">
+                <li>CUMPLE EL SILABO</li>
+                <li class="star">{{ c.avg_silabo }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>CUMPLE EL SILABO</li>
-            <li class="star">{{ c.avg_silabo }}</li>
-        </ul>
+            <ul class="items">
+                <li>COHERENCIA EN LA CALIF</li>
+                <li class="star">{{ c.avg_grading_consistency }}</li>
+            </ul>
 
-        <ul class="items">
-            <li>COHERENCIA EN LA CALIF</li>
-            <li class="star">{{ c.avg_grading_consistency }}</li>
-        </ul>
-
-        <ul class="items">
-            <li>MATERIAL DIDÁCTICO</li>
-            <li class="star">{{ c.avg_teaching_material }}</li>
-        </ul>
+            <ul class="items">
+                <li>MATERIAL DIDÁCTICO</li>
+                <li class="star">{{ c.avg_teaching_material }}</li>
+            </ul>
 
 
-        <p class="total-grades">
-            {{ c.total_grades }} evaluaciones
-        </p>
+            <p class="total-grades">
+                {{ c.total_grades }} evaluaciones
+            </p>
 
-        {% if user.is_authenticated %}
+            {% if user.is_authenticated %}
 
-        {% if c.user_graded %}
-        <a href="{% url 'editgrade' c.grade_id %}" class="link-editar">Editar mi calificación</a>
-        {% else %}
-        <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">Calificar este curso</a>
-        {% endif %}
+            {% if c.user_graded %}
+            <a href="{% url 'editgrade' c.grade_id %}" class="link-editar">Editar mi calificación</a>
+            {% else %}
+            <a href="{% url 'creategrade' c.pc.id %}" class="link-calificar">Calificar este curso</a>
+            {% endif %}
 
-        {% endif %}
+            {% endif %}
 
+        </div>
+
+        {% endfor %}
     </div>
-
     {% endfor %}
 
 </div>
