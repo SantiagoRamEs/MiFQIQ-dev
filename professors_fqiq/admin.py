@@ -10,7 +10,7 @@ class ProfessorAdmin(admin.ModelAdmin):
     list_display = ("name", "get_courses")
 
     def get_courses(self, obj):
-        return ", ".join([pc.course.name_course for pc in obj.professorcourse_set.all()])
+        return ", ".join(pc.course.name_course for pc in obj.coursestaught.all())
 
     get_courses.short_description = "Cursos"
 

@@ -70,7 +70,7 @@ class ProfessorCourse(models.Model):
     professor = models.ForeignKey(
         Professor,
         on_delete=models.CASCADE,
-        related_name = 'courses_taught'
+        related_name = 'coursestaught'
     )
 
     course = models.ForeignKey(
