@@ -26,40 +26,72 @@
             </div>
 
             <div class="general-stats">
-                <div class="stat-item"><span>PUNTUALIDAD</span><span class="score">{{ stats.avg_puntuality }}</span>
+                <div class="stat-item">
+                    <span>PUNTUALIDAD</span>
+                    <span class="score">{{ stats.avg_puntuality }}</span>
                 </div>
-                <div class="stat-item"><span>AMBIENTE DE CLASE</span><span class="score">{{ stats.avg_class_environment
-                        }}</span></div>
-                <div class="stat-item"><span>EMPATÍA</span><span class="score">{{ stats.avg_empathy }}</span></div>
-                <div class="stat-item"><span>EVALÚA CONTENIDOS</span><span class="score">{{ stats.avg_class_evaluation
-                        }}</span></div>
-                <div class="stat-item"><span>FACILIDAD DE EXMS</span><span class="score">{{ stats.avg_exam_difficulty
-                        }}</span></div>
-                <div class="stat-item"><span>CUMPLE EL SILABO</span><span class="score">{{ stats.avg_silabo }}</span>
+
+                <div class="stat-item">
+                    <span>AMBIENTE DE CLASE</span>
+                    <span class="score">{{ stats.avg_class_environment }}</span>
                 </div>
-                <div class="stat-item"><span>COHERENCIA CALIF.</span><span class="score">{{
-                        stats.avg_grading_consistency }}</span></div>
-                <div class="stat-item"><span>MAT. DIDÁCTICO</span><span class="score">{{ stats.avg_teaching_material
-                        }}</span></div>
+
+                <div class="stat-item">
+                    <span>EMPATÍA</span>
+                    <span class="score">{{ stats.avg_empathy }}</span>
+                </div>
+
+                <div class="stat-item">
+                    <span>EVALÚA CONTENIDOS</span>
+                    <span class="score">{{ stats.avg_class_evaluation }}</span>
+                </div>
+
+                <div class="stat-item">
+                    <span>FACILIDAD DE EXMS</span>
+                    <span class="score">{{ stats.avg_exam_difficulty }}</span>
+                </div>
+
+                <div class="stat-item">
+                    <span>CUMPLE EL SILABO</span>
+                    <span class="score">{{ stats.avg_silabo }}</span>
+                </div>
+
+                <div class="stat-item">
+                    <span>COHERENCIA CALIF.</span>
+                    <span class="score">{{ stats.avg_grading_consistency }}</span>
+                </div>
+
+                <div class="stat-item">
+                    <span>MAT. DIDÁCTICO</span>
+                    <span class="score">{{ stats.avg_teaching_material }}</span>
+                </div>
             </div>
         </aside>
 
         <section class="comments-area">
+
             <h3>¿Qué opinan tus compañeros?</h3>
+
             <div class="comments-scroll-container">
+
                 {% if has_comments %}
                 {% for grade in grades %}
+
                 <article class="comment-bubble">
+
                     <div class="comment-meta">
                         <span class="comment-user">{{ grade.user.first_name }} {{ grade.user.last_name }}</span>
                         <span class="comment-date">{{ grade.created|date:"d/m/Y" }}</span>
                     </div>
+
                     <div class="comment-text">
                         {{ grade.comment }}
                     </div>
+
                 </article>
                 {% endfor %}
                 {% else %}
+
                 <p class="no-comments">Aún no hay comentarios para este profesor.</p>
                 {% endif %}
             </div>
@@ -67,26 +99,56 @@
     </section>
 
     <section class="courses-layout">
+
         <h3 class="section-title">Calificaciones por curso</h3>
+
         <div class="courses-grid">
+
             {% for c in courses %}
             <div class="course-card">
                 <h4>{{ c.pc.course.name_course }}</h4>
                 <div class="course-stats">
-                    <div class="stat-item"><span>Puntualidad</span><span class="score">{{ c.avg_puntuality }}</span>
+
+                    <div class="stat-item">
+                        <span>Puntualidad</span>
+                        <span class="score">{{ c.avg_puntuality }}</span>
                     </div>
-                    <div class="stat-item"><span>Ambiente</span><span class="score">{{ c.avg_class_environment }}</span>
+
+                    <div class="stat-item">
+                        <span>Ambiente</span>
+                        <span class="score">{{ c.avg_class_environment }}</span>
                     </div>
-                    <div class="stat-item"><span>Empatía</span><span class="score">{{ c.avg_empathy }}</span></div>
-                    <div class="stat-item"><span>Evaluación</span><span class="score">{{ c.avg_class_evaluation
-                            }}</span></div>
-                    <div class="stat-item"><span>Exámenes</span><span class="score">{{ c.avg_exam_difficulty }}</span>
+
+                    <div class="stat-item">
+                        <span>Empatía</span>
+                        <span class="score">{{ c.avg_empathy }}</span>
                     </div>
-                    <div class="stat-item"><span>Sílabo</span><span class="score">{{ c.avg_silabo }}</span></div>
-                    <div class="stat-item"><span>Coherencia</span><span class="score">{{ c.avg_grading_consistency
-                            }}</span></div>
-                    <div class="stat-item"><span>Material</span><span class="score">{{ c.avg_teaching_material }}</span>
+
+                    <div class="stat-item">
+                        <span>Evaluación</span>
+                        <span class="score">{{ c.avg_class_evaluation }}</span>
                     </div>
+
+                    <div class="stat-item">
+                        <span>Exámenes</span>
+                        <span class="score">{{ c.avg_exam_difficulty }}</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span>Sílabo</span>
+                        <span class="score">{{ c.avg_silabo }}</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span>Coherencia</span>
+                        <span class="score">{{ c.avg_grading_consistency }}</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span>Material</span>
+                        <span class="score">{{ c.avg_teaching_material }}</span>
+                    </div>
+
                 </div>
                 <p class="total-count">{{ c.total_grades }} evaluaciones</p>
                 <a href="{% url 'creategrade' c.pc.id %}" class="btn-rate">Calificar este curso</a>
@@ -96,4 +158,4 @@
     </section>
 
 </div>
-{% endblock %}
+{% endblock %}Z
