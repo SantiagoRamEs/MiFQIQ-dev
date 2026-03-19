@@ -1,100 +1,164 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: white;
+  margin: 0;
+  font-family: sans-serif;
 }
+
+/* CONTENEDOR GENERAL (CLAVE para evitar bordes pegados) */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* INFO SUPERIOR */
 .info-container {
   text-align: center;
+  padding: 20px 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-/* Contenedor principal */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+/* TITULO */
+.califica-a {
+  margin: 0;
+  font-size: 20pt;
+  font-style: italic;
+  color: #00356d;
+}
+
+/* NOTE */
+.note {
+  color: #00356d;
   padding: 10px;
 }
 
-/* Estilos del formulario */
-
-.form-group {
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.text-fill {
+  text-align: justify;
 }
 
+/* FORMULARIO */
+form {
+  width: 100%;
+}
+
+/* GRUPO DE CAMPO */
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* LABEL */
 form label {
   font-size: 14pt;
   font-weight: bold;
   color: #ffae00;
-  display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-form input,
-form select {
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 8px;
-  margin-bottom: 12px;
-  width: 80px;
-}
-
+/* TEXTAREA */
 form textarea {
-  box-sizing: border-box;
-  padding: 15px;
   width: 100%;
-  min-width: 300px;
+  min-height: 120px;
+  padding: 12px;
   border-radius: 10px;
   font-size: 11pt;
   border: 1px solid #ccc;
-  field-sizing: content;
+  resize: vertical;
 }
 
-/* Estilos del botón */
+/* BOTÓN */
 .btn-submit {
   background-color: #007bff;
   color: white;
-  padding: 12px 24px;
+  padding: 14px;
+  width: 100%;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
 }
 
 .btn-submit:hover {
   background-color: #0056b3;
 }
 
-option {
-  border-style: none;
-}
-.califica-a {
-  margin: 0;
-  padding: 0;
-  font-size: 18pt;
-  font-style: italic;
-  color: #00356d;
-}
-.note {
-  color: #00356d;
-  box-sizing: border-box;
-  padding: 5px;
-}
-.text-fill {
-  text-align: justify;
+/* ESTRELLAS */
+.star-rating {
+  display: flex;
+  gap: 6px;
 }
 
+.star-rating span {
+  font-size: 30px;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    color 0.2s;
+}
+
+.star-rating span:hover {
+  transform: scale(1.2);
+}
+
+/* DESCRIPCIONES */
 .description-container {
-  max-width: 750px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: justify;
   color: #00356d;
 }
+
 .description-title {
   text-align: center;
-  font-size: 14pt;
+  font-size: 15pt;
+  margin-bottom: 10px;
+}
+
+/* ERRORES */
+.error {
+  color: red;
+  font-size: 10pt;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* ========================= */
+/* RESPONSIVE (pantallas grandes) */
+/* ========================= */
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  form {
+    width: 48%;
+  }
+
+  .description-container {
+    width: 48%;
+  }
+
+  .btn-submit {
+    width: auto;
+    padding: 12px 30px;
+  }
 }
