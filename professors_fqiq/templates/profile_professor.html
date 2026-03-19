@@ -1,4 +1,4 @@
-{% extends 'base.html' %}{% load static %}
+{% extends 'base.html' %}{% load static %}{% load rating_extras %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/profile_professor.css' %}">
@@ -34,42 +34,66 @@
 
                 <div class="rating-row">
                     <span>PUNTUALIDAD</span>
-                    <span>{{ stats.avg_puntuality }}</span>
+                    <span class="stars">
+                        {{ stats.avg_puntuality|stars }}
+                        <span class="rating-number">({{ stats.avg_puntuality|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>AMBIENTE DE CLASE</span>
-                    <span>{{ stats.avg_class_environment }}</span>
+                    <span class="stars">
+                        {{ stats.avg_class_environment|stars }}
+                        <span class="rating-number">({{ stats.avg_class_environment|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>EMPATÍA</span>
-                    <span>{{ stats.avg_empathy }}</span>
+                    <span class="stars">
+                        {{ stats.avg_empathy|stars }}
+                        <span class="rating-number">({{ stats.avg_empathy|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>EVALÚA CONTENIDOS</span>
-                    <span>{{ stats.avg_class_evaluation }}</span>
+                    <span class="stars">
+                        {{ stats.avg_class_evaluation|stars }}
+                        <span class="rating-number">({{ stats.avg_class_evaluation|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>FACILIDAD DE EXMS</span>
-                    <span>{{ stats.avg_exam_difficulty }}</span>
+                    <span class="stars">
+                        {{ stats.avg_exam_difficulty|stars }}
+                        <span class="rating-number">({{ stats.avg_exam_difficulty|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>CUMPLE EL SILABO</span>
-                    <span>{{ stats.avg_silabo }}</span>
+                    <span class="stars">
+                        {{ stats.avg_silabo|stars }}
+                        <span class="rating-number">({{ stats.avg_silabo|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>COHERENCIA EN CALIF.</span>
-                    <span>{{ stats.avg_grading_consistency }}</span>
+                    <span class="stars">
+                        {{ stats.avg_grading_consistency|stars }}
+                        <span class="rating-number">({{ stats.avg_grading_consistency|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>MATERIAL DIDÁCTICO</span>
-                    <span>{{ stats.avg_teaching_material }}</span>
+                    <span class="stars">
+                        {{ stats.avg_teaching_material|stars }}
+                        <span class="rating-number">({{ stats.avg_teaching_material|floatformat:1 }})</span>
+                    </span>
                 </div>
 
             </div>
@@ -78,7 +102,6 @@
 
 
         <!-- COMENTARIOS -->
-
         <div class="comments-section">
 
             <h3>¿Qué opinan tus compañeros acerca de este profesor?</h3>
@@ -120,10 +143,9 @@
 
 
     <!-- CURSOS -->
-
     <div class="courses-section">
 
-        <h4>Calificaciones por curso: </h4>
+        <h4>Calificaciones por curso:</h4>
 
         <div class="courses-grid">
 
@@ -135,42 +157,66 @@
 
                 <div class="rating-row">
                     <span>PUNTUALIDAD</span>
-                    <span>{{ c.avg_puntuality }}</span>
+                    <span class="stars">
+                        {{ c.avg_puntuality|stars }}
+                        <span class="rating-number">({{ c.avg_puntuality|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>AMBIENTE DE CLASE</span>
-                    <span>{{ c.avg_class_environment }}</span>
+                    <span class="stars">
+                        {{ c.avg_class_environment|stars }}
+                        <span class="rating-number">({{ c.avg_class_environment|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>EMPATÍA</span>
-                    <span>{{ c.avg_empathy }}</span>
+                    <span class="stars">
+                        {{ c.avg_empathy|stars }}
+                        <span class="rating-number">({{ c.avg_empathy|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>EVALÚA CONTENIDOS</span>
-                    <span>{{ c.avg_class_evaluation }}</span>
+                    <span class="stars">
+                        {{ c.avg_class_evaluation|stars }}
+                        <span class="rating-number">({{ c.avg_class_evaluation|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>FACILIDAD DE EXM</span>
-                    <span>{{ c.avg_exam_difficulty }}</span>
+                    <span class="stars">
+                        {{ c.avg_exam_difficulty|stars }}
+                        <span class="rating-number">({{ c.avg_exam_difficulty|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>CUMPLE EL SILABO</span>
-                    <span>{{ c.avg_silabo }}</span>
+                    <span class="stars">
+                        {{ c.avg_silabo|stars }}
+                        <span class="rating-number">({{ c.avg_silabo|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>COHERENCIA EN CALIF</span>
-                    <span>{{ c.avg_grading_consistency }}</span>
+                    <span class="stars">
+                        {{ c.avg_grading_consistency|stars }}
+                        <span class="rating-number">({{ c.avg_grading_consistency|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <div class="rating-row">
                     <span>MATERIAL DIDÁCTICO</span>
-                    <span>{{ c.avg_teaching_material }}</span>
+                    <span class="stars">
+                        {{ c.avg_teaching_material|stars }}
+                        <span class="rating-number">({{ c.avg_teaching_material|floatformat:1 }})</span>
+                    </span>
                 </div>
 
                 <p class="evaluations">

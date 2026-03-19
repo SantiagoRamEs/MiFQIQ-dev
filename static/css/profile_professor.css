@@ -1,66 +1,89 @@
+/* CONTENEDOR PRINCIPAL */
 .container-professor {
   max-width: 1200px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 20px 14px; /* menos padding lateral en móvil */
 }
 
 /* FILA SUPERIOR */
-
 .top-layout {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: flex-start;
 }
 
 /* PERFIL */
-
 .profile-card {
   width: 320px;
+  max-width: 100%; /* CLAVE: evita desborde */
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 16px;
 }
 
+/* INFO PERFIL */
 .profile-info {
   text-align: center;
 }
 
 .photo {
-  width: 120px;
+  width: 100px;
+  max-width: 100%;
   border-radius: 50%;
 }
 
 .name {
   margin-top: 10px;
   color: #f2a900;
+  font-size: 16pt;
 }
 
 .courses {
   margin-top: 6px;
+  font-size: 10pt;
 }
 
 /* FILAS DE CALIFICACIÓN */
-
 .rating-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
   font-weight: bold;
+  font-size: 10.5pt; /* más compacto */
+  white-space: nowrap; /* evita salto de línea */
+}
+
+/* TEXTO IZQUIERDA */
+.rating-row span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ESTRELLAS + NÚMERO */
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px; /* más pequeño para que quepa */
+  color: #f2a900;
+}
+
+.rating-number {
+  font-size: 10px;
+  color: #555;
 }
 
 /* COMENTARIOS */
-
-h4 {
-  text-align: center;
-}
-
 .comments-section {
   flex: 1;
+  min-width: 0; /* evita overflow en flex */
 }
 
 .comments-box {
   background: white;
-  padding: 20px;
+  padding: 16px;
   border-radius: 16px;
 }
 
@@ -71,75 +94,67 @@ h4 {
 .comment-header {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .comment-body {
   background: #f1f1f1;
   padding: 10px;
   border-radius: 8px;
-}
-
-.no-comments {
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  font-size: 10.5pt;
 }
 
 /* CURSOS */
-
 .courses-section {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .courses-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .course-card {
   width: 260px;
+  max-width: 100%;
   background: white;
-  padding: 20px;
+  padding: 16px;
   border-radius: 16px;
 }
 
-.course-card h4 {
-  text-align: center;
-}
-
 /* BOTONES */
-
-.btn-rate {
-  display: block;
-  text-align: center;
-  margin-top: 12px;
-  background: #f2a900;
-  color: white;
-  padding: 10px;
-  border-radius: 20px;
-  text-decoration: none;
-}
-
+.btn-rate,
 .btn-edit {
   display: block;
   text-align: center;
   margin-top: 12px;
-  background: #4caf50;
-  color: white;
   padding: 10px;
   border-radius: 20px;
   text-decoration: none;
+  font-size: 10.5pt;
+}
+
+.btn-rate {
+  background: #f2a900;
+  color: white;
+}
+
+.btn-edit {
+  background: #4caf50;
+  color: white;
 }
 
 .evaluations {
   text-align: center;
   margin-top: 8px;
+  font-size: 10pt;
 }
 
+/* ========================= */
 /* RESPONSIVE */
+/* ========================= */
 
 @media (max-width: 900px) {
   .top-layout {
@@ -152,8 +167,20 @@ h4 {
 }
 
 @media (max-width: 600px) {
-  .courses-grid {
-    justify-content: center;
+  .container-professor {
+    padding: 16px 10px;
+  }
+
+  .rating-row {
+    font-size: 9.5pt; /* aún más compacto */
+  }
+
+  .stars {
+    font-size: 11px;
+  }
+
+  .rating-number {
+    font-size: 9px;
   }
 
   .course-card {
