@@ -50,6 +50,10 @@
 
 /* COMENTARIOS */
 
+h4 {
+  text-align: center;
+}
+
 .comments-section {
   flex: 1;
 }
@@ -78,7 +82,8 @@
 
 .no-comments {
   text-align: center;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 /* CURSOS */
@@ -90,6 +95,7 @@
 .courses-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 20px;
 }
 

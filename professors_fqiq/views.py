@@ -85,12 +85,11 @@ def form_valid(self, form):
 def create_grade(request, pc_id):
 
     professor_course = get_object_or_404(ProfessorCourse, id=pc_id)
-
     professor = professor_course.professor
 
     # evitar que el usuario califique el mismo curso dos veces
     already_graded = Grade.objects.filter(
-        professor_course=professor_course,
+        professorcourse=professor_course,
         user=request.user
     ).exists()
 
@@ -98,13 +97,12 @@ def create_grade(request, pc_id):
         return redirect('profile_professor', pk=professor.id)
 
     if request.method == 'POST':
-
         form = GradeForm(request.POST)
 
         if form.is_valid():
             grade = form.save(commit=False)
             grade.user = request.user
-            grade.professor_course = professor_course
+            grade.professorcourse = professor_course
             grade.save()
 
             return redirect('profile_professor', pk=professor.id)
@@ -116,8 +114,7 @@ def create_grade(request, pc_id):
         'form': form,
         'professor_course': professor_course,
         'professor': professor
-    })    
-
+    })
 
 
 
