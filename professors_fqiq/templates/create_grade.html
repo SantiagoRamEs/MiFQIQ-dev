@@ -45,14 +45,18 @@
 
 <div class="container">
 
-    <form method="POST">
+    <form method="POST" class="form-card">
         {% csrf_token %}
 
         {% for field in form %}
+
         <div class="form-group">
 
             {{ field.label_tag }}
 
+            {% if field.name == "comment" %}
+            {{ field }}
+            {% else %}
             <!-- Estrellas -->
             <div class="star-rating" data-field="{{ field.id_for_label }}">
                 {% for i in "12345" %}
@@ -60,10 +64,11 @@
                 {% endfor %}
             </div>
 
-            <!-- Input original oculto -->
+            <!-- Input oculto -->
             <div style="display:none;">
                 {{ field }}
             </div>
+            {% endif %}
 
             {% if field.errors %}
             <div class="error">
@@ -72,6 +77,7 @@
             {% endif %}
 
         </div>
+
         {% endfor %}
 
         <button type="submit" class="btn-submit">

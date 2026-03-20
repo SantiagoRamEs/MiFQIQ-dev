@@ -1,72 +1,40 @@
-/* Reset básico */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: white;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* CONTENEDOR GENERAL (CLAVE para evitar bordes pegados) */
+/* CONTENEDOR GENERAL */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
+  align-items: center; /* centra */
   gap: 30px;
 }
 
-/* INFO SUPERIOR */
-.info-container {
-  text-align: center;
-  padding: 20px 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* TITULO */
-.califica-a {
-  margin: 0;
-  font-size: 20pt;
-  font-style: italic;
-  color: #00356d;
-}
-
-/* NOTE */
-.note {
-  color: #00356d;
-  padding: 10px;
-}
-
-.text-fill {
-  text-align: justify;
-}
-
-/* FORMULARIO */
-form {
+/* FORMULARIO COMO TARJETA */
+.form-card {
   width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* GRUPO DE CAMPO */
+/* GRUPOS */
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 /* LABEL */
 form label {
-  font-size: 14pt;
+  font-size: 13pt;
   font-weight: bold;
   color: #ffae00;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* TEXTAREA */
+/* TEXTAREA (comentario) */
 form textarea {
   width: 100%;
   min-height: 120px;
@@ -85,7 +53,7 @@ form textarea {
   width: 100%;
   border: none;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -101,64 +69,22 @@ form textarea {
 }
 
 .star-rating span {
-  font-size: 30px;
+  font-size: 28px;
   cursor: pointer;
-  transition:
-    transform 0.1s,
-    color 0.2s;
+  transition: transform 0.1s;
 }
 
 .star-rating span:hover {
   transform: scale(1.2);
 }
 
-/* DESCRIPCIONES */
-.description-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-  color: #00356d;
-}
-
-.description-title {
-  text-align: center;
-  font-size: 15pt;
-  margin-bottom: 10px;
-}
-
-/* ERRORES */
-.error {
-  color: red;
-  font-size: 10pt;
-}
-
-.error-message {
-  color: red;
-  margin-top: 10px;
-}
-
-/* ========================= */
-/* RESPONSIVE (pantallas grandes) */
-/* ========================= */
-
+/* RESPONSIVE */
 @media (min-width: 768px) {
   .container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
   }
 
-  form {
-    width: 48%;
-  }
-
-  .description-container {
-    width: 48%;
-  }
-
-  .btn-submit {
-    width: auto;
-    padding: 12px 30px;
+  .form-card {
+    max-width: 520px;
   }
 }

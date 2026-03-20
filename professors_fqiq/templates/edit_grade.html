@@ -18,7 +18,7 @@
         Curso: <b>{{ course.name_course }}</b>
     </p>
 
-    <form method="POST">
+    <form method="POST" class="form-card">
 
         {% csrf_token %}
 
@@ -26,7 +26,22 @@
         <div class="form-group">
 
             {{ field.label_tag }}
+
+            {% if field.name == "comment" %}
             {{ field }}
+            {% else %}
+            <!-- Estrellas -->
+            <div class="star-rating" data-field="{{ field.id_for_label }}">
+                {% for i in "12345" %}
+                <span data-value="{{ forloop.counter }}">☆</span>
+                {% endfor %}
+            </div>
+
+            <!-- Input oculto -->
+            <div style="display:none;">
+                {{ field }}
+            </div>
+            {% endif %}
 
             {% if field.errors %}
             <div class="error">
@@ -41,8 +56,6 @@
             Guardar cambios
         </button>
 
-        <br>
-
         <a href="{% url 'profile_professor' professor.id %}" class="btn-cancelar">
             Cancelar
         </a>
@@ -50,5 +63,8 @@
     </form>
 
 </div>
+
+<!-- reutiliza el mismo JS -->
+<script src="{% static 'javascript/star_rating.js' %}"></script>
 
 {% endblock %}
