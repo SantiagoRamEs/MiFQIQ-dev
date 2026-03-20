@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12pt; /* más pequeño para que quepa */
+  font-size: 13pt;
   color: #f2a900;
 }
 
@@ -158,8 +158,8 @@
     padding: 16px 10px;
   }
 
-  .top-layout {
-    justify-content: center;
+  .profile-card {
+    margin: auto;
   }
 
   .course-card {
