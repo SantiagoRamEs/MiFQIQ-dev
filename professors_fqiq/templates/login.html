@@ -19,12 +19,14 @@
 </p>
 {% endif %}
 
-<p class="title-login">¡Bienvenido a Mi FQIQ!</p>
 <div class="content-all">
     <div class="body-content">
         <img class="img-fqiq" src="{% static 'img/home-fqiq.jpg' %}" alt="Facultad de Química e Ingeniería Química">
 
         <div class="login-content">
+
+            <p class="title-login">¡Bienvenido a Mi FQIQ!</p>
+
             {% if user.is_authenticated %}
             <p class="nota">Hola, {{ user.first_name|truncatewords:1 }} ya has iniciado sesión.
             </p>
