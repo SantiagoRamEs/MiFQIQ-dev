@@ -158,6 +158,9 @@
     padding: 16px 10px;
   }
 
+  .top-layout {
+    flex-direction: column;
+  }
   .profile-card {
     margin: auto;
   }
