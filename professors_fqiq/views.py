@@ -150,17 +150,17 @@ def profile_professor(request, pk):
     # CURSOS OPTIMIZADOS
     courses_qs = ProfessorCourse.objects.filter(
         professor=professor
-    ).select_related('course').annotate(
-        total_grades=Count('grade'),
+        ).select_related('course').annotate(
+        total_grades=Count('grades'),
 
-        avg_puntuality=Avg('grade__puntuality'),
-        avg_class_environment=Avg('grade__class_environment'),
-        avg_empathy=Avg('grade__empathy'),
-        avg_class_evaluation=Avg('grade__class_evaluation'),
-        avg_exam_difficulty=Avg('grade__exam_difficulty'),
-        avg_silabo=Avg('grade__silabo'),
-        avg_grading_consistency=Avg('grade__grading_consistency'),
-        avg_teaching_material=Avg('grade__teaching_material'),
+        avg_puntuality=Avg('grades__puntuality'),
+        avg_class_environment=Avg('grades__class_environment'),
+        avg_empathy=Avg('grades__empathy'),
+        avg_class_evaluation=Avg('grades__class_evaluation'),
+        avg_exam_difficulty=Avg('grades__exam_difficulty'),
+        avg_silabo=Avg('grades__silabo'),
+        avg_grading_consistency=Avg('grades__grading_consistency'),
+        avg_teaching_material=Avg('grades__teaching_material'),
     )
 
     course_stats = []
