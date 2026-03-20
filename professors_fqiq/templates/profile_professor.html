@@ -225,7 +225,7 @@
 
                 {% if user.is_authenticated %}
 
-                {% if c.user_graded %}
+                {% if c.grade_id %}
 
                 <a href="{% url 'editgrade' c.grade_id %}" class="btn-edit">
                     Editar mi calificación

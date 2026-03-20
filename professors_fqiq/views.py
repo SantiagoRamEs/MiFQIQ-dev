@@ -119,6 +119,7 @@ def create_grade(request, pc_id):
 
 
 #PERFIL DE PROFESOR
+@login_required
 def profile_professor(request, pk):
 
     professor = get_object_or_404(Professor, pk=pk)
@@ -134,47 +135,65 @@ def profile_professor(request, pk):
         'teaching_material',
     ]
 
-    # PROMEDIO GENERAL
+    # PROMEDIO GENERAL (1 query)
     grades = Grade.objects.filter(professorcourse__professor=professor)
 
-    stats = {}
-    for field in rating_fields:
-        avg = grades.aggregate(avg=Avg(field))['avg']
-        stats[f'avg_{field}'] = round(avg, 2) if avg else None
+    stats_raw = grades.aggregate(**{
+        f'avg_{field}': Avg(field) for field in rating_fields
+    })
 
-    # CURSOS DEL PROFESOR
-    courses = ProfessorCourse.objects.filter(
+    stats = {
+        key: round(value, 2) if value else None
+        for key, value in stats_raw.items()
+    }
+
+    # CURSOS OPTIMIZADOS
+    courses_qs = ProfessorCourse.objects.filter(
         professor=professor
-    ).select_related('course')
+    ).select_related('course').annotate(
+        total_grades=Count('grade'),
+
+        avg_puntuality=Avg('grade__puntuality'),
+        avg_class_environment=Avg('grade__class_environment'),
+        avg_empathy=Avg('grade__empathy'),
+        avg_class_evaluation=Avg('grade__class_evaluation'),
+        avg_exam_difficulty=Avg('grade__exam_difficulty'),
+        avg_silabo=Avg('grade__silabo'),
+        avg_grading_consistency=Avg('grade__grading_consistency'),
+        avg_teaching_material=Avg('grade__teaching_material'),
+    )
 
     course_stats = []
 
-    for pc in courses:
+    for pc in courses_qs:
 
-        course_grades = Grade.objects.filter(professorcourse=pc)
+        # obtener calificación del usuario (solo 1 query por curso)
+        user_grade = None
+        if request.user.is_authenticated:
+            user_grade = Grade.objects.filter(
+                user=request.user,
+                professorcourse=pc
+            ).only('id').first()
 
         data = {
             "pc": pc,
-            "total_grades": course_grades.count()
+            "total_grades": pc.total_grades,
+
+            "avg_puntuality": round(pc.avg_puntuality, 2) if pc.avg_puntuality else None,
+            "avg_class_environment": round(pc.avg_class_environment, 2) if pc.avg_class_environment else None,
+            "avg_empathy": round(pc.avg_empathy, 2) if pc.avg_empathy else None,
+            "avg_class_evaluation": round(pc.avg_class_evaluation, 2) if pc.avg_class_evaluation else None,
+            "avg_exam_difficulty": round(pc.avg_exam_difficulty, 2) if pc.avg_exam_difficulty else None,
+            "avg_silabo": round(pc.avg_silabo, 2) if pc.avg_silabo else None,
+            "avg_grading_consistency": round(pc.avg_grading_consistency, 2) if pc.avg_grading_consistency else None,
+            "avg_teaching_material": round(pc.avg_teaching_material, 2) if pc.avg_teaching_material else None,
+
+            "grade_id": user_grade.id if user_grade else None
         }
-
-        for field in rating_fields:
-            avg = course_grades.aggregate(avg=Avg(field))['avg']
-            data[f'avg_{field}'] = round(avg, 2) if avg else None
-
-        # si el usuario ya calificó ese curso
-        user_graded = False
-        if request.user.is_authenticated:
-            user_graded = Grade.objects.filter(
-                user=request.user,
-                professorcourse=pc
-            ).exists()
-
-        data["user_graded"] = user_graded
 
         course_stats.append(data)
 
-    # comentarios
+    # COMENTARIOS
     grades_with_comments = grades.exclude(comment="")
 
     return render(request, "profile_professor.html", {
