@@ -15,7 +15,7 @@
 /* PERFIL */
 .profile-card {
   box-sizing: border-box;
-  width: 320px;
+  width: 350px;
   max-width: 100%; /* CLAVE: evita desborde */
   background: white;
   padding: 20px;
@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px; /* más pequeño para que quepa */
+  font-size: 12pt; /* más pequeño para que quepa */
   color: #f2a900;
 }
 
@@ -153,38 +153,13 @@
   font-size: 10pt;
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media (max-width: 900px) {
-  .top-layout {
-    flex-direction: column;
-  }
-
-  .profile-card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 650px) {
-  .profile-card {
-    width: 320px;
-  }
+@media (max-width: 750px) {
   .container-professor {
     padding: 16px 10px;
   }
 
-  .rating-row {
-    font-size: 9.5pt; /* aún más compacto */
-  }
-
-  .stars {
-    font-size: 11px;
-  }
-
-  .rating-number {
-    font-size: 9px;
+  .top-layout {
+    justify-content: center;
   }
 
   .course-card {
