@@ -9,12 +9,16 @@
   gap: 30px;
 }
 
-.califica-a {
+.califica-a,
+.course-name {
   text-align: center;
 }
-
+.note {
+  font-size: 10pt;
+}
 .info-container {
   padding: 15px;
+  color: #0056b3;
 }
 
 /* FORMULARIO COMO TARJETA */
@@ -75,6 +79,7 @@ form textarea {
 .star-rating {
   display: flex;
   gap: 6px;
+  justify-content: center;
 }
 
 .star-rating span {
@@ -90,14 +95,9 @@ form textarea {
 .description-title {
   font-size: 14pt;
 }
-
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  .container {
-    align-items: center;
-  }
-
+@media (width: 600px) {
   .form-card {
-    max-width: 520px;
+    box-sizing: border-box;
+    width: 40px;
   }
 }
