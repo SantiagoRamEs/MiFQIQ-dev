@@ -99,59 +99,61 @@
             </div>
 
         </div>
-    </div>
 
-    <!-- COMENTARIOS -->
-    <div class="comments-section">
+        <!-- COMENTARIOS -->
+        <div class="comments-section">
 
-        <h3>¿Qué opinan tus compañeros acerca de este profesor?</h3>
+            <h3>¿Qué opinan tus compañeros acerca de este profesor?</h3>
 
-        <div class="comments-box">
+            <div class="comments-box">
 
-            {% if has_comments %}
+                {% if has_comments %}
 
-            {% for grade in grades %}
+                {% for grade in grades %}
 
-            <div class="comment">
+                <div class="comment">
 
-                <!-- HEADER -->
-                <div class="comment-header">
-                    <span class="comment-user">
-                        {{ grade.user.first_name }} {{ grade.user.last_name }}
-                    </span>
+                    <!-- HEADER -->
+                    <div class="comment-header">
+                        <span class="comment-user">
+                            {{ grade.user.first_name }} {{ grade.user.last_name }}
+                        </span>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="comment-body">
+                        {{ grade.comment }}
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="comment-footer">
+                        <span class="comment-course">
+                            {{ grade.professorcourse.course.name_course }}
+                        </span>
+
+                        <span class="comment-date">
+                            {{ grade.created|date:"d/m/Y" }}
+                        </span>
+                    </div>
+
                 </div>
 
-                <!-- BODY -->
-                <div class="comment-body">
-                    {{ grade.comment }}
+                {% endfor %}
+
+                {% else %}
+
+                <div class="no-comments">
+                    Aún no hay comentarios para este profesor.
                 </div>
 
-                <!-- FOOTER -->
-                <div class="comment-footer">
-                    <span class="comment-course">
-                        {{ grade.professorcourse.course.name_course }}
-                    </span>
-
-                    <span class="comment-date">
-                        {{ grade.created|date:"d/m/Y" }}
-                    </span>
-                </div>
+                {% endif %}
 
             </div>
-
-            {% endfor %}
-
-            {% else %}
-
-            <div class="no-comments">
-                Aún no hay comentarios para este profesor.
-            </div>
-
-            {% endif %}
 
         </div>
-
     </div>
+
+
     <!-- CURSOS -->
     <div class="courses-section">
 
