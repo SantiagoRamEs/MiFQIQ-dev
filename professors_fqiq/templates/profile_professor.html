@@ -114,13 +114,27 @@
 
                 <div class="comment">
 
+                    <!-- HEADER -->
                     <div class="comment-header">
-                        <span>{{ grade.user.first_name }}</span>
-                        <span>{{ grade.created|date:"d/m/Y" }}</span>
+                        <span class="comment-user">
+                            {{ grade.user.first_name }} {{ grade.user.last_name }}
+                        </span>
                     </div>
 
+                    <!-- BODY -->
                     <div class="comment-body">
                         {{ grade.comment }}
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="comment-footer">
+                        <span class="comment-course">
+                            {{ grade.professorcourse.course.name_course }}
+                        </span>
+
+                        <span class="comment-date">
+                            {{ grade.created|date:"d/m/Y" }}
+                        </span>
                     </div>
 
                 </div>
@@ -138,117 +152,113 @@
             </div>
 
         </div>
+        <!-- CURSOS -->
+        <div class="courses-section">
 
-    </div>
+            <h4>Calificaciones por curso:</h4>
 
+            <div class="courses-grid">
 
-    <!-- CURSOS -->
-    <div class="courses-section">
+                {% for c in courses %}
 
-        <h4>Calificaciones por curso:</h4>
+                <div class="course-card">
 
-        <div class="courses-grid">
+                    <h4>{{ c.pc.course.name_course }}</h4>
 
-            {% for c in courses %}
+                    <div class="rating-row">
+                        <span>PUNTUALIDAD</span>
+                        <span class="stars">
+                            {{ c.avg_puntuality|stars }}
+                            <span class="rating-number">({{ c.avg_puntuality|floatformat:1 }})</span>
+                        </span>
+                    </div>
 
-            <div class="course-card">
+                    <div class="rating-row">
+                        <span>AMBIENTE DE CLASE</span>
+                        <span class="stars">
+                            {{ c.avg_class_environment|stars }}
+                            <span class="rating-number">({{ c.avg_class_environment|floatformat:1 }})</span>
+                        </span>
+                    </div>
 
-                <h4>{{ c.pc.course.name_course }}</h4>
+                    <div class="rating-row">
+                        <span>EMPATÍA</span>
+                        <span class="stars">
+                            {{ c.avg_empathy|stars }}
+                            <span class="rating-number">({{ c.avg_empathy|floatformat:1 }})</span>
+                        </span>
+                    </div>
 
-                <div class="rating-row">
-                    <span>PUNTUALIDAD</span>
-                    <span class="stars">
-                        {{ c.avg_puntuality|stars }}
-                        <span class="rating-number">({{ c.avg_puntuality|floatformat:1 }})</span>
-                    </span>
+                    <div class="rating-row">
+                        <span>EVALÚA CONTENIDOS</span>
+                        <span class="stars">
+                            {{ c.avg_class_evaluation|stars }}
+                            <span class="rating-number">({{ c.avg_class_evaluation|floatformat:1 }})</span>
+                        </span>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>FACILIDAD DE EXM</span>
+                        <span class="stars">
+                            {{ c.avg_exam_difficulty|stars }}
+                            <span class="rating-number">({{ c.avg_exam_difficulty|floatformat:1 }})</span>
+                        </span>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>CUMPLE EL SILABO</span>
+                        <span class="stars">
+                            {{ c.avg_silabo|stars }}
+                            <span class="rating-number">({{ c.avg_silabo|floatformat:1 }})</span>
+                        </span>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>COHERENCIA EN CALIF</span>
+                        <span class="stars">
+                            {{ c.avg_grading_consistency|stars }}
+                            <span class="rating-number">({{ c.avg_grading_consistency|floatformat:1 }})</span>
+                        </span>
+                    </div>
+
+                    <div class="rating-row">
+                        <span>MATERIAL DIDÁCTICO</span>
+                        <span class="stars">
+                            {{ c.avg_teaching_material|stars }}
+                            <span class="rating-number">({{ c.avg_teaching_material|floatformat:1 }})</span>
+                        </span>
+                    </div>
+
+                    <p class="evaluations">
+                        {{ c.total_grades }} evaluaciones
+                    </p>
+
+                    {% if user.is_authenticated %}
+
+                    {% if c.grade_id %}
+
+                    <a href="{% url 'editgrade' c.grade_id %}" class="btn-edit">
+                        Editar mi calificación
+                    </a>
+
+                    {% else %}
+
+                    <a href="{% url 'creategrade' c.pc.id %}" class="btn-rate">
+                        Calificar este curso
+                    </a>
+
+                    {% endif %}
+
+                    {% endif %}
+
                 </div>
 
-                <div class="rating-row">
-                    <span>AMBIENTE DE CLASE</span>
-                    <span class="stars">
-                        {{ c.avg_class_environment|stars }}
-                        <span class="rating-number">({{ c.avg_class_environment|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>EMPATÍA</span>
-                    <span class="stars">
-                        {{ c.avg_empathy|stars }}
-                        <span class="rating-number">({{ c.avg_empathy|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>EVALÚA CONTENIDOS</span>
-                    <span class="stars">
-                        {{ c.avg_class_evaluation|stars }}
-                        <span class="rating-number">({{ c.avg_class_evaluation|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>FACILIDAD DE EXM</span>
-                    <span class="stars">
-                        {{ c.avg_exam_difficulty|stars }}
-                        <span class="rating-number">({{ c.avg_exam_difficulty|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>CUMPLE EL SILABO</span>
-                    <span class="stars">
-                        {{ c.avg_silabo|stars }}
-                        <span class="rating-number">({{ c.avg_silabo|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>COHERENCIA EN CALIF</span>
-                    <span class="stars">
-                        {{ c.avg_grading_consistency|stars }}
-                        <span class="rating-number">({{ c.avg_grading_consistency|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <div class="rating-row">
-                    <span>MATERIAL DIDÁCTICO</span>
-                    <span class="stars">
-                        {{ c.avg_teaching_material|stars }}
-                        <span class="rating-number">({{ c.avg_teaching_material|floatformat:1 }})</span>
-                    </span>
-                </div>
-
-                <p class="evaluations">
-                    {{ c.total_grades }} evaluaciones
-                </p>
-
-                {% if user.is_authenticated %}
-
-                {% if c.grade_id %}
-
-                <a href="{% url 'editgrade' c.grade_id %}" class="btn-edit">
-                    Editar mi calificación
-                </a>
-
-                {% else %}
-
-                <a href="{% url 'creategrade' c.pc.id %}" class="btn-rate">
-                    Calificar este curso
-                </a>
-
-                {% endif %}
-
-                {% endif %}
+                {% endfor %}
 
             </div>
-
-            {% endfor %}
 
         </div>
 
     </div>
 
-</div>
-
-{% endblock %}
+    {% endblock %}

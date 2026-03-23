@@ -77,32 +77,43 @@
 }
 
 /* COMENTARIOS */
-.comments-section {
-  flex: 1;
-  min-width: 0; /* evita overflow en flex */
-}
-
 .comments-box {
-  background: white;
-  padding: 16px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-
 .comment {
-  margin-bottom: 12px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .comment-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
+  font-size: 11pt;
+  font-weight: 600;
+  color: #00356d;
+  margin-bottom: 6px;
 }
 
 .comment-body {
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 10.5pt;
+  font-size: 11pt;
+  margin-bottom: 8px;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5pt;
+  color: #777; /* más disimulado */
+}
+
+.comment-course {
+  text-align: left;
+}
+
+.comment-date {
+  text-align: right;
 }
 
 /* CURSOS */
