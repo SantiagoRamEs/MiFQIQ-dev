@@ -4,7 +4,6 @@ body {
 }
 body {
   box-sizing: border-box;
-  padding: 10px;
   font-family: "Poppins", "sans-sserif";
   margin: 0;
   background: linear-gradient(270deg, #eae7df, #f9f8f6);
