@@ -462,3 +462,448 @@ Traceback (most recent call last):
     raise DisallowedHost(msg)
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:9000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
 WARNING 2026-03-15 19:02:09,972 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:21:09,302 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:21:09,448 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:21:09,521 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:21:09,523 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:21:44,985 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:21:44,988 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:21:45,039 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:21:45,040 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:27:26,331 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:27:26,333 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:27:26,374 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:27:26,377 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:28:22,562 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:28:22,567 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:28:22,641 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:28:22,641 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:29:32,239 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:29:32,243 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:29:47,797 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:29:47,802 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:30:02,436 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:30:02,439 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:32:48,746 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:32:48,746 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:32:48,751 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:32:48,752 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:33:26,121 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:33:26,122 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:33:42,897 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:33:42,899 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,322 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,322 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,322 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,322 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,759 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,759 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,764 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,764 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,911 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,911 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,912 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:24,912 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,047 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,047 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,047 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,047 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,169 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,173 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,173 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,173 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,314 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,316 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,316 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,316 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:34:25,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:36:59,670 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:36:59,675 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:37:20,071 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:37:20,075 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:41:39,664 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:41:39,668 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:36,861 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:36,861 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:37,116 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:37,171 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:37,173 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:42:37,426 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:44:07,113 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:44:07,204 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:44:07,251 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:44:07,258 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:44:24,039 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:44:24,040 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:44:29,993 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:44:29,997 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:44:32,413 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:44:32,413 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:44:37,384 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:44:37,384 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:44:37,714 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:44:37,714 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:46:07,126 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:46:07,129 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:46:28,410 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:46:28,410 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:46:28,460 log Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:46:28,460 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:47:38,281 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:47:38,287 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:47:50,329 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:47:50,330 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:47:50,331 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:47:50,331 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2026-03-22 18:50:02,736 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:02,740 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:50:02,769 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:02,771 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:50:16,030 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:16,031 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:50:16,068 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:16,070 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:50:35,872 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:35,876 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:50:35,939 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:50:35,939 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:51:04,841 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:51:04,848 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:51:04,908 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:51:04,911 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2026-03-22 18:52:30,227 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:52:30,227 basehttp "GET / HTTP/1.1" 400 143
+ERROR 2026-03-22 18:52:30,261 log Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\middleware\security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2026-03-22 18:52:30,262 basehttp "GET /favicon.ico HTTP/1.1" 400 143
+WARNING 2026-03-22 18:55:03,279 log Not Found: /admin-mifqiq
+WARNING 2026-03-22 18:55:03,279 basehttp "GET /admin-mifqiq HTTP/1.1" 404 5034
+WARNING 2026-03-22 18:55:03,333 log Not Found: /favicon.ico
+WARNING 2026-03-22 18:55:03,333 basehttp "GET /favicon.ico HTTP/1.1" 404 5030
