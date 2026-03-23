@@ -2,39 +2,102 @@
   box-sizing: border-box;
   padding: 20px;
 }
+
+/* TÍTULO */
 .title {
-  font-size: 18pt;
+  font-size: 20pt;
   text-align: center;
   font-style: italic;
   color: #00356d;
-}
-table {
-  width: 360px;
-  margin: auto;
-  background-color: white;
-  border-radius: 20px;
-  padding: 15px;
-}
-.dates,
-.delete-grade {
-  text-align: right;
-}
-.btn-delete {
-  color: white;
-  background-color: red;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.content {
-  font-size: 11pt;
-  font-style: normal;
+/* TABLA */
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 16px;
+  padding: 10px;
+  border-collapse: collapse;
+  overflow: hidden;
 }
+
+/* CABECERA */
+thead {
+  background-color: #f5f7fa;
+}
+
+th {
+  font-size: 11pt;
+  color: #00356d;
+  padding: 10px;
+  text-align: left;
+}
+
+/* CONTENIDO */
+td {
+  padding: 10px;
+  font-size: 11pt;
+  border-top: 1px solid #eee;
+  vertical-align: middle;
+}
+
+/* LINKS */
 .name {
   text-decoration: none;
   color: #00356d;
+  font-weight: 500;
 }
+
+.name:hover {
+  text-decoration: underline;
+}
+
+/* FECHAS */
+.dates {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ACCIONES */
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* BOTONES */
+.btn-edit {
+  text-decoration: none;
+  font-size: 10pt;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: #00356d;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #00264d;
+}
+
+.btn-delete {
+  color: white;
+  background-color: #d11a2a;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #a50f1d;
+}
+
+/* MENSAJE VACÍO */
 .no-grades {
   text-align: center;
+  font-size: 12pt;
+  margin-top: 20px;
 }

@@ -21,7 +21,6 @@
                 <th class="label">Curso</th>
                 <th class="label">Fecha</th>
                 <th class="label">Acción</th>
-                <th class="label">Acción</th>
             </tr>
         </thead>
 
@@ -54,18 +53,6 @@
                     <form method="post" action="{% url 'delete_grade' grade.id %}">
                         {% csrf_token %}
                         <button class="btn-delete">Eliminar</button>
-                    </form>
-
-                </td>
-
-                <td class="delete-grade">
-
-
-                    <form method="post" action="{% url 'delete_grade' grade.id %}">
-                        {% csrf_token %}
-                        <button class="btn-delete" type="submit">
-                            Eliminar
-                        </button>
                     </form>
 
                 </td>
