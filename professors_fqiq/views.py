@@ -213,8 +213,8 @@ def edit_grade(request, grade_id):
         user=request.user
     )
 
-    professor = grade.professor_course.professor
-    course = grade.professor_course.course
+    professor = grade.professorcourse.professor
+    course = grade.professorcourse.course
 
     if request.method == "POST":
         form = GradeForm(request.POST, instance=grade)
