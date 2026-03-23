@@ -56,10 +56,15 @@ form {
   border: 1px solid #ccc;
 }
 
+.form-card {
+  box-sizing: border-box;
+}
+
 textarea {
   width: 100%;
-  min-height: 50px;
+  height: 50px;
   padding: 12px;
+  margin: auto;
   border-radius: 10px;
   font-size: 11pt;
   border: 1px solid #ccc;
@@ -106,7 +111,7 @@ textarea {
 @media (width: 600px) {
   .form-card {
     box-sizing: border-box;
-    width: 40px;
+    width: 340px;
   }
   textarea {
     width: 300px;
