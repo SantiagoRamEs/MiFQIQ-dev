@@ -5,12 +5,12 @@
   padding: 20px 16px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-around;
   gap: 30px;
 }
 
 .description-container {
-  max-width: 400px;
+  width: 500px;
 }
 
 .califica-a,
@@ -27,7 +27,7 @@
 
 /* FORMULARIO COMO TARJETA */
 .form-card {
-  max-width: 400px;
+  width: 400px;
   background: white;
   text-align: center;
   padding: 24px;
@@ -52,7 +52,7 @@ form label {
 
 /* TEXTAREA (comentario) */
 form {
-  max-width: 550px;
+  max-width: 100%px;
   padding: 12px;
   border-radius: 10px;
   font-size: 11pt;
@@ -64,7 +64,7 @@ form {
 }
 
 textarea {
-  width: 98%;
+  width: 90%;
   height: 50px;
   padding: 12px;
   margin: auto;
