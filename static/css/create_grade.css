@@ -48,8 +48,16 @@ form label {
 }
 
 /* TEXTAREA (comentario) */
-form textarea {
-  width: 250px;
+form {
+  max-width: 550px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 11pt;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
   min-height: 50px;
   padding: 12px;
   border-radius: 10px;
@@ -99,5 +107,8 @@ form textarea {
   .form-card {
     box-sizing: border-box;
     width: 40px;
+  }
+  textarea {
+    width: 300px;
   }
 }
