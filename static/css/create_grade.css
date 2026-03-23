@@ -9,11 +9,20 @@
   gap: 30px;
 }
 
+.califica-a {
+  text-align: center;
+}
+
+.info-container {
+  padding: 15px;
+}
+
 /* FORMULARIO COMO TARJETA */
 .form-card {
   width: 100%;
   max-width: 500px;
   background: white;
+  text-align: center;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -36,13 +45,13 @@ form label {
 
 /* TEXTAREA (comentario) */
 form textarea {
-  width: 100%;
-  min-height: 120px;
+  width: 250px;
+  min-height: 50px;
   padding: 12px;
   border-radius: 10px;
   font-size: 11pt;
   border: 1px solid #ccc;
-  resize: vertical;
+  field-sizing: content;
 }
 
 /* BOTÓN */
@@ -76,6 +85,10 @@ form textarea {
 
 .star-rating span:hover {
   transform: scale(1.2);
+}
+
+.description-title {
+  font-size: 14pt;
 }
 
 /* RESPONSIVE */

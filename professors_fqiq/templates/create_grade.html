@@ -9,13 +9,13 @@
 
 <div class="info-container">
 
-    <h1 class="califica-a">
+    <h2 class="califica-a">
         Califica a <b>{{ professor.name }}</b>
-    </h1>
+    </h2>
 
-    <p class="course-name">
-        Curso: <b>{{ professor_course.course.name_course }}</b>
-    </p>
+    <h3 class="course-name">
+        en <b>{{ professor_course.course.name_course }}</b>
+    </h3>
 
     {% if error %}
     <div class="error-message">
