@@ -240,3 +240,13 @@ def delete_grade(request, grade_id):
         grade.delete()
 
     return redirect('my_grades')
+
+
+
+#API
+from rest_framework import viewsets
+from .serializer import ProfessorSerializer
+
+class ProfessorViewSet(viewsets.ModelViewSet):
+    queryset = Professor.objects.all()
+    serializer_class = ProfessorSerializer

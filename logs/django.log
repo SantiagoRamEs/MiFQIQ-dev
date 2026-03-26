@@ -907,3 +907,21 @@ WARNING 2026-03-22 18:55:03,279 log Not Found: /admin-mifqiq
 WARNING 2026-03-22 18:55:03,279 basehttp "GET /admin-mifqiq HTTP/1.1" 404 5034
 WARNING 2026-03-22 18:55:03,333 log Not Found: /favicon.ico
 WARNING 2026-03-22 18:55:03,333 basehttp "GET /favicon.ico HTTP/1.1" 404 5030
+WARNING 2026-03-25 22:40:57,652 log Not Found: /admin
+WARNING 2026-03-25 22:40:57,654 basehttp "GET /admin HTTP/1.1" 404 5243
+WARNING 2026-03-25 22:40:57,716 log Not Found: /favicon.ico
+WARNING 2026-03-25 22:40:57,716 basehttp "GET /favicon.ico HTTP/1.1" 404 5267
+WARNING 2026-03-25 22:41:09,725 log Not Found: /admin-mifqiq
+WARNING 2026-03-25 22:41:09,725 basehttp "GET /admin-mifqiq HTTP/1.1" 404 5271
+WARNING 2026-03-25 22:45:40,235 log Not Found: /api/v1/Professor/1
+WARNING 2026-03-25 22:45:40,235 basehttp "GET /api/v1/Professor/1 HTTP/1.1" 404 7350
+WARNING 2026-03-25 22:45:47,858 log Not Found: /api/v1/Professor/6
+WARNING 2026-03-25 22:45:47,858 basehttp "GET /api/v1/Professor/6 HTTP/1.1" 404 7350
+WARNING 2026-03-25 22:45:52,362 log Not Found: /api/v1/Professor/5
+WARNING 2026-03-25 22:45:52,362 basehttp "GET /api/v1/Professor/5 HTTP/1.1" 404 7350
+WARNING 2026-03-25 22:46:04,633 log Not Found: /api/v1/Professor/19
+WARNING 2026-03-25 22:46:04,633 basehttp "GET /api/v1/Professor/19 HTTP/1.1" 404 7354
+WARNING 2026-03-26 11:18:13,768 log Not Found: /api/docs
+WARNING 2026-03-26 11:18:13,770 basehttp "GET /api/docs HTTP/1.1" 404 6035
+WARNING 2026-03-26 11:19:36,056 log Not Found: /api/dredoc/
+WARNING 2026-03-26 11:19:36,059 basehttp "GET /api/dredoc/ HTTP/1.1" 404 6046

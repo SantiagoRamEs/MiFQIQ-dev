@@ -84,7 +84,14 @@ INSTALLED_APPS = [
 
     # app
     'professors_fqiq',
+
+    #API
+    'drf_spectacular',
+    'rest_framework',
+    
 ]
+
+
 
 SITE_ID = 1
 
@@ -300,3 +307,9 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # DEFAULT PK
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#API
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}

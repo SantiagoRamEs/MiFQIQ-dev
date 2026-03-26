@@ -20,6 +20,7 @@ from professors_fqiq import urls
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin-mifqiq/', admin.site.urls),
     path('', include(urls))
