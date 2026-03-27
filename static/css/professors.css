@@ -42,7 +42,7 @@ h3 {
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
-@media (max-width: 830px) {
+@media (max-width: 750px) {
   .horizontal-card {
     width: 300px;
   }

@@ -1,27 +1,23 @@
 .my_grades {
-  box-sizing: border-box;
-  padding: 20px;
+  padding: 5px;
+  justify-content: center;
 }
 
 /* TÍTULO */
 .title {
   font-size: 20pt;
   text-align: center;
-  font-style: italic;
   color: #00356d;
-  margin-bottom: 20px;
 }
 
 /* TABLA */
 table {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
+  margin: 0;
   background-color: white;
   border-radius: 16px;
   padding: 10px;
   border-collapse: collapse;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 /* CABECERA */
@@ -37,9 +33,15 @@ th {
 }
 
 /* CONTENIDO */
-td {
+
+tr {
+  box-sizing: border-box;
   padding: 10px;
-  font-size: 11pt;
+}
+td {
+  width: 145px;
+  padding: 10px;
+  font-size: 10pt;
   border-top: 1px solid #eee;
   vertical-align: middle;
 }
@@ -57,15 +59,19 @@ td {
 
 /* FECHAS */
 .dates {
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
+  box-sizing: border-box;
+  width: 100px;
 }
 
 /* ACCIONES */
 .actions {
+  font-size: 10pt;
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: space-around;
 }
 
 /* BOTONES */
@@ -100,4 +106,27 @@ td {
   text-align: center;
   font-size: 12pt;
   margin-top: 20px;
+}
+
+@media (max-width: 490px) {
+  .my_grades {
+    box-sizing: border-box;
+    width: 370px;
+  }
+  td {
+    width: 145px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100px;
+  }
+
+  .table-container {
+    overflow-x: auto; /* Activa scroll horizontal */
+    max-width: 100%; /* Ajusta al ancho de la pantalla */
+  }
 }

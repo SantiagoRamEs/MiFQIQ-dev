@@ -111,7 +111,7 @@ textarea {
 .description-title {
   font-size: 14pt;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .form-card {
     box-sizing: border-box;
     width: 340px;

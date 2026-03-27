@@ -11,61 +11,62 @@
 
     <h1 class="title">Mis calificaciones</h1>
 
-    {% if grades %}
+    <div class="table-container">
+        {% if grades %}
+        <table>
 
-    <table>
+            <thead class="grades">
+                <tr>
+                    <th class="label">Profesor</th>
+                    <th class="label">Curso</th>
+                    <th class="label">Fecha</th>
+                    <th class="label">Acciones</th>
+                </tr>
+            </thead>
 
-        <thead class="grades">
-            <tr>
-                <th class="label">Profesor</th>
-                <th class="label">Curso</th>
-                <th class="label">Fecha</th>
-                <th class="label">Acción</th>
-            </tr>
-        </thead>
+            <tbody class="content">
 
-        <tbody class="content">
+                {% for grade in grades %}
 
-            {% for grade in grades %}
+                <tr>
 
-            <tr>
+                    <td>
+                        <a class="name" href="{% url 'profile_professor' grade.professorcourse.professor.id %}">
+                            {{ grade.professorcourse.professor.name }}
+                        </a>
+                    </td>
 
-                <td>
-                    <a class="name" href="{% url 'profile_professor' grade.professorcourse.professor.id %}">
-                        {{ grade.professorcourse.professor.name }}
-                    </a>
-                </td>
+                    <td class="course">
+                        {{ grade.professorcourse.course.name_course }}
+                    </td>
 
-                <td>
-                    {{ grade.professorcourse.course.name_course }}
-                </td>
+                    <td class="dates">
+                        {{ grade.created|date:"d/m/Y" }}
+                    </td>
 
-                <td class="dates">
-                    {{ grade.created|date:"d/m/Y" }}
-                </td>
+                    <td class="actions">
 
-                <td class="actions">
+                        <a href="{% url 'editgrade' grade.id %}" class="btn-edit">
+                            Editar
+                        </a>
 
-                    <a href="{% url 'editgrade' grade.id %}" class="btn-edit">
-                        Editar
-                    </a>
+                        <form method="post" action="{% url 'delete_grade' grade.id %}">
+                            {% csrf_token %}
+                            <button class="btn-delete">Eliminar</button>
+                        </form>
 
-                    <form method="post" action="{% url 'delete_grade' grade.id %}">
-                        {% csrf_token %}
-                        <button class="btn-delete">Eliminar</button>
-                    </form>
+                    </td>
 
-                </td>
+                </tr>
 
-            </tr>
+                {% endfor %}
 
-            {% endfor %}
+            </tbody>
 
-        </tbody>
+        </table>
+        {% else %}
+    </div>
 
-    </table>
-
-    {% else %}
 
     <p class="no-grades">
         Aún no has calificado a tus profesores.
