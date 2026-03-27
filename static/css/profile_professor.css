@@ -2,7 +2,8 @@
 .container-professor {
   max-width: 1200px;
   margin: auto;
-  padding: 20px 14px; /* menos padding lateral en móvil */
+  padding: 20px 14px;
+  color: #00356d;
 }
 
 /* FILA SUPERIOR */
@@ -34,8 +35,8 @@
 }
 
 .name {
-  margin-top: 10px;
-  color: #f2a900;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 16pt;
 }
 
@@ -52,8 +53,8 @@
   gap: 8px;
   margin-top: 6px;
   font-weight: bold;
-  font-size: 10.5pt; /* más compacto */
-  white-space: nowrap; /* evita salto de línea */
+  font-size: 10.5pt;
+  white-space: nowrap;
 }
 
 /* TEXTO IZQUIERDA */
@@ -67,17 +68,19 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 13pt;
+  font-size: 12pt;
   color: #f2a900;
 }
 
 .rating-number {
-  font-size: 10px;
+  font-size: 11px;
   color: #555;
 }
 
 /* COMENTARIOS */
 .comments-section {
+  margin: 0;
+  padding: 4px 10px;
   flex: 1;
   min-width: 0; /* evita overflow en flex */
 }
@@ -95,6 +98,12 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+h4,
+h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
 /* HEADER */
 .comment-header {
   font-size: 11pt;
@@ -107,6 +116,7 @@
 .comment-body {
   font-size: 11pt;
   margin-bottom: 8px;
+  color: black;
 }
 
 /* FOOTER */
@@ -129,7 +139,7 @@
 
 /* CURSOS */
 .courses-section {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .courses-grid {
@@ -176,6 +186,10 @@
 }
 
 @media (max-width: 750px) {
+  .stars {
+    font-size: 16pt;
+  }
+
   .container-professor {
     padding: 16px 10px;
   }
