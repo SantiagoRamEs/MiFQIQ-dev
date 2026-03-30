@@ -271,10 +271,18 @@ class CourseViewSet(viewsets.ModelViewSet):
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 class DatosPrivadosView(APIView):
-    # Esto bloquea a cualquier persona que no sea Staff/Admin
+    # 1. Autenticación: ¿Quién eres? (Usa JWT)
+    authentication_classes = [JWTAuthentication] 
+    
+    # 2. Permiso: ¿Tienes permiso de Admin?
     permission_classes = [IsAdminUser] 
 
     def get(self, request):
-        return Response({"data": "Solo el admin puede ver esto"})
+        # Si llega aquí, es porque es Admin y su JWT es válido
+        return Response({
+            "mensaje": f"Hola {request.user.username}, acceso concedido.",
+            "data": "Información sensible de la facultad"
+        })
