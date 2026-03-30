@@ -1201,3 +1201,81 @@ WARNING 2026-03-27 00:19:54,637 log Not Found: /.well-known/appspecific/com.chro
 WARNING 2026-03-27 00:19:54,637 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6195
 WARNING 2026-03-27 00:20:27,545 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2026-03-27 00:20:27,546 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6195
+WARNING 2026-03-30 16:29:13,568 log Not Found: /favicon.ico
+WARNING 2026-03-30 16:29:13,568 basehttp "GET /favicon.ico HTTP/1.1" 404 6047
+WARNING 2026-03-30 16:32:13,685 log Not Found: /favicon.ico
+WARNING 2026-03-30 16:32:13,685 basehttp "GET /favicon.ico HTTP/1.1" 404 6048
+ERROR 2026-03-30 16:32:20,297 log Internal Server Error: /api/v1/User/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 809, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 728, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 537, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 398, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 386, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 1101, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\rest_framework\serializers.py", line 1180, in get_field_names
+    assert not (fields is None and exclude is None), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the UserSerializer serializer.",)
+ERROR 2026-03-30 16:32:20,301 basehttp "GET /api/v1/User/ HTTP/1.1" 500 160664
+WARNING 2026-03-30 16:33:33,679 log Not Found: /favicon.ico
+WARNING 2026-03-30 16:33:33,679 basehttp "GET /favicon.ico HTTP/1.1" 404 6048
+WARNING 2026-03-30 16:44:11,824 log Not Found: /favicon.ico
+WARNING 2026-03-30 16:44:11,824 basehttp "GET /favicon.ico HTTP/1.1" 404 6048
+WARNING 2026-03-30 17:18:44,397 log Not Found: /favicon.ico
+WARNING 2026-03-30 17:18:44,397 basehttp "GET /favicon.ico HTTP/1.1" 404 6296
+WARNING 2026-03-30 17:18:51,689 log Not Found: /favicon.ico
+WARNING 2026-03-30 17:18:51,689 basehttp "GET /favicon.ico HTTP/1.1" 404 6296
+WARNING 2026-03-30 17:19:09,952 log Not Found: /favicon.ico
+WARNING 2026-03-30 17:19:09,952 basehttp "GET /favicon.ico HTTP/1.1" 404 6296
+WARNING 2026-03-30 17:35:32,932 log Not Found: /api/v1/Grade/
+WARNING 2026-03-30 17:35:32,932 basehttp "GET /api/v1/Grade/ HTTP/1.1" 404 14799
+WARNING 2026-03-30 17:35:32,989 log Not Found: /favicon.ico
+WARNING 2026-03-30 17:35:32,991 basehttp "GET /favicon.ico HTTP/1.1" 404 6587
+WARNING 2026-03-30 17:35:36,201 log Not Found: /api/v1/ProfessorCourse/
+WARNING 2026-03-30 17:35:36,203 basehttp "GET /api/v1/ProfessorCourse/ HTTP/1.1" 404 14839
+WARNING 2026-03-30 17:35:41,647 log Not Found: /api/v1/
+WARNING 2026-03-30 17:35:41,649 basehttp "GET /api/v1/ HTTP/1.1" 404 14775

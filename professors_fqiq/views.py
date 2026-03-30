@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django import forms
 from .forms import GradeForm
-from .models import Professor, Grade, User, ProfessorCourse
+from .models import Professor, Grade, User, ProfessorCourse, Course
 from django.contrib.auth.models import AbstractUser
 from django.db.models import Avg, Count
 
@@ -245,8 +245,36 @@ def delete_grade(request, grade_id):
 
 #API
 from rest_framework import viewsets
-from .serializer import ProfessorSerializer
+from .serializer import ProfessorSerializer, UserSerializer, GradeSerializer, ProfessorCourseSerializer, CourseSerializer
 
 class ProfessorViewSet(viewsets.ModelViewSet):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset =  User.objects.all()
+    serializer_class = UserSerializer
+
+class GradeViewSet(viewsets.ModelViewSet):
+    queryset =  Grade.objects.all()
+    serializer_class = GradeSerializer
+
+class ProfessorCourseViewSet(viewsets.ModelViewSet):
+    queryset =  ProfessorCourse.objects.all()
+    serializer_class = ProfessorCourseSerializer
+
+class CourseViewSet(viewsets.ModelViewSet):
+    queryset =  Course.objects.all()
+    serializer_class = CourseSerializer
+
+#
+from rest_framework.permissions import IsAdminUser
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+class DatosPrivadosView(APIView):
+    # Esto bloquea a cualquier persona que no sea Staff/Admin
+    permission_classes = [IsAdminUser] 
+
+    def get(self, request):
+        return Response({"data": "Solo el admin puede ver esto"})
