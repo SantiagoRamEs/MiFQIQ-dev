@@ -18,6 +18,8 @@
 
                 {% if professor.photo %}
                 <img src="{{ professor.photo.url }}" class="photo">
+                {% else %}
+                <img src="{{ static 'img/default.png' }}" class="photo">
                 {% endif %}
 
                 <h2 class="name">{{ professor.name }}</h2>
