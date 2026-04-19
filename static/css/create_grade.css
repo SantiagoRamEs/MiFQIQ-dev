@@ -10,6 +10,7 @@
 
 .description-container {
   width: 500px;
+  color: #f1f1f1f1;
 }
 
 .califica-a,
@@ -17,11 +18,13 @@
   text-align: center;
 }
 .note {
-  font-size: 10pt;
+  font-size: 11pt;
+  padding: 10px 20px;
+  text-align: center;
 }
 .info-container {
   padding: 15px;
-  color: #00356d;
+  color: #f1f1f1f1;
 }
 
 /* FORMULARIO COMO TARJETA */
@@ -44,14 +47,14 @@
 /* LABEL */
 form label {
   font-size: 13pt;
-  font-weight: bold;
-  color: #0056b3;
+  font-weight: 800;
+  color: #f1f1f1;
   margin-bottom: 8px;
 }
 
 /* TEXTAREA (comentario) */
 form {
-  max-width: 100%px;
+  max-width: 100%;
   padding: 12px;
   border-radius: 10px;
   font-size: 11pt;
@@ -60,9 +63,11 @@ form {
 
 .form-card {
   box-sizing: border-box;
+  background-color: #ffffff1d;
 }
 
 textarea {
+  color: #f1f1f1f1;
   width: 90%;
   height: 50px;
   padding: 12px;
@@ -71,6 +76,7 @@ textarea {
   font-size: 11pt;
   border: 1px solid #ccc;
   field-sizing: content;
+  background-color: #ffffff2e;
 }
 
 /* BOTÓN */
@@ -110,6 +116,11 @@ textarea {
 
 .description-title {
   font-size: 14pt;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 12pt;
 }
 @media (max-width: 750px) {
   .form-card {

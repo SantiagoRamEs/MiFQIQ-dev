@@ -1391,3 +1391,576 @@ WARNING 2026-04-19 12:10:07,264 log Not Found: /.well-known/appspecific/com.chro
 WARNING 2026-04-19 12:10:07,279 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
 WARNING 2026-04-19 12:10:58,221 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2026-04-19 12:10:58,236 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:08:21,649 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:08:21,650 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:09:09,576 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:09:09,578 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:09:29,680 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:09:29,682 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:09:35,808 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:09:35,811 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:12:28,115 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:12:28,117 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:12:40,555 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:12:40,557 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:13:00,312 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:13:00,315 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:13:25,449 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:13:25,452 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:14:05,197 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:14:05,198 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:14:13,100 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:14:13,102 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:15:59,532 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:15:59,534 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:17:30,057 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:17:30,059 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:17:55,296 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:17:55,298 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:18:18,007 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:18:18,010 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:18:35,317 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:18:35,321 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:18:53,101 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:18:53,103 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:19:12,027 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:19:12,031 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:19:42,296 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:19:42,298 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:20:41,512 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:20:41,514 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:21:06,251 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:21:06,253 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:21:36,579 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:21:36,581 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:22:20,749 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:22:20,751 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:23:23,089 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:23:23,091 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:23:39,101 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:23:39,103 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:23:59,679 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:23:59,680 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:24:16,526 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:24:16,528 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:24:24,319 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:24:24,321 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:24:33,894 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:24:33,895 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:25:17,330 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:25:17,330 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:25:37,947 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:25:37,949 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:25:49,754 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:25:49,756 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:27:26,407 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:27:26,410 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:27:43,894 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:27:43,898 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:28:22,385 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:28:22,388 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:28:27,122 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:28:27,125 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:29:25,932 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:29:25,934 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:29:45,270 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:29:45,273 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:30:00,592 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:30:00,595 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:31:48,668 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:31:48,670 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:32:26,643 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:32:26,645 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:33:17,358 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:33:17,360 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:34:22,424 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:34:22,425 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:34:39,153 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:34:39,154 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:35:56,509 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:35:56,509 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:36:01,095 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:36:01,098 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:36:15,341 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:36:15,345 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:36:27,258 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:36:27,259 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:38:38,953 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:38:38,954 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:39:08,402 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:39:08,404 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:39:21,555 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:39:21,557 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:39:27,114 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:39:27,116 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:39:37,570 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:39:37,572 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:40:12,429 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:40:12,430 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:41:17,658 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:41:17,659 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:42:01,957 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:42:01,958 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:42:37,890 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:42:37,894 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:42:55,683 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:42:55,683 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:55:30,921 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:55:30,927 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:55:47,713 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:55:47,713 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:56:26,052 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:56:26,054 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:56:33,888 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:56:33,889 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 14:58:37,860 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 14:58:37,861 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 15:01:50,270 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 15:01:50,271 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 15:09:38,234 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 15:09:38,235 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 15:12:37,851 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 15:12:37,853 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 15:13:37,255 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 15:13:37,256 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:42:51,238 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:42:51,238 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:43:54,922 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:43:54,924 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:44:37,702 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:44:37,705 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:45:44,203 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:45:44,212 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:46:25,105 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:46:25,105 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:46:43,330 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:46:43,332 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:47:38,035 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:47:38,040 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:47:48,320 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:47:48,325 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:48:11,001 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:48:11,001 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:49:11,455 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:49:11,455 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:50:39,182 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:50:39,182 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:51:13,573 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:51:13,576 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:52:21,282 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:52:21,282 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:57:41,254 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:57:41,254 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:58:13,403 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:58:13,406 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 16:59:21,669 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 16:59:21,671 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:01:20,143 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:01:20,150 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:07:34,194 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:07:34,197 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:07:49,638 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:07:49,638 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:07:59,539 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:07:59,543 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:08:32,798 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:08:32,798 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:08:50,372 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:08:50,372 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:08:56,643 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:08:56,649 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:12:57,022 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:12:57,023 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:13:56,356 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:13:56,356 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:15:42,830 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:15:42,833 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:15:58,335 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:15:58,340 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:16:11,380 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:16:11,396 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:17:02,329 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:17:02,331 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:17:20,862 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:17:20,862 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:17:33,158 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:17:33,158 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:20:34,218 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:20:34,221 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:20:45,830 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:20:45,835 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:20:48,280 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:20:48,280 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:21:05,519 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:21:05,521 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:21:38,959 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:21:38,959 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:22:57,809 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:22:57,809 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:25:24,508 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:25:24,512 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:25:43,215 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:25:43,217 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+ERROR 2026-04-19 17:29:50,696 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 199, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'split'
+ERROR 2026-04-19 17:29:50,713 basehttp "GET /professors/17/ HTTP/1.1" 500 330309
+WARNING 2026-04-19 17:29:50,920 log Not Found: /favicon.ico
+WARNING 2026-04-19 17:29:50,920 basehttp "GET /favicon.ico HTTP/1.1" 404 6587
+ERROR 2026-04-19 17:33:33,546 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'custom_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 199, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'custom_filters' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+allauth
+cache
+i18n
+l10n
+log
+rating_extras
+rest_framework
+socialaccount
+static
+tz
+ERROR 2026-04-19 17:33:33,556 basehttp "GET /professors/17/ HTTP/1.1" 500 260669
+WARNING 2026-04-19 17:33:33,656 log Not Found: /favicon.ico
+WARNING 2026-04-19 17:33:33,656 basehttp "GET /favicon.ico HTTP/1.1" 404 6587
+ERROR 2026-04-19 17:36:00,083 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'custom_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 199, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'custom_filters' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+allauth
+cache
+i18n
+l10n
+log
+rating_extras
+rest_framework
+socialaccount
+static
+tz
+ERROR 2026-04-19 17:36:00,090 basehttp "GET /professors/17/ HTTP/1.1" 500 260669
+WARNING 2026-04-19 17:36:00,157 log Not Found: /favicon.ico
+WARNING 2026-04-19 17:36:00,157 basehttp "GET /favicon.ico HTTP/1.1" 404 6587
+ERROR 2026-04-19 17:40:39,001 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'extras'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 199, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'extras' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+allauth
+cache
+i18n
+l10n
+log
+rating_extras
+rest_framework
+socialaccount
+static
+tz
+ERROR 2026-04-19 17:40:39,011 basehttp "GET /professors/17/ HTTP/1.1" 500 260316
+WARNING 2026-04-19 17:40:39,161 log Not Found: /favicon.ico
+WARNING 2026-04-19 17:40:39,161 basehttp "GET /favicon.ico HTTP/1.1" 404 6587
+WARNING 2026-04-19 17:46:40,703 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:46:40,705 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:48:03,347 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:48:03,367 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735
+WARNING 2026-04-19 17:48:22,636 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 17:48:22,637 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6735

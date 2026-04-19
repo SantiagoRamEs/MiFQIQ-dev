@@ -24,7 +24,7 @@
 .title-login {
   font-size: 18pt;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
   margin: 0;
   padding-top: 20px;
@@ -127,7 +127,7 @@ h3 {
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .title {
-  font-weight: bold;
+  font-weight: 800;
   color: #ffae00;
   font-size: 12pt;
   text-align: center;

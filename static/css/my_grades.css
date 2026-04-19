@@ -1,4 +1,5 @@
 .my_grades {
+  box-sizing: border-box;
   padding: 5px;
   justify-content: center;
 }
@@ -29,7 +30,7 @@ th {
   font-size: 11pt;
   color: #f1f1f1f1;
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 /* CONTENIDO */
@@ -37,12 +38,16 @@ th {
 tr {
   box-sizing: border-box;
   padding: 10px;
+  align-items: center;
+}
 td {
-  width: 145px;
+  width: 320px;
   padding: 10px;
   font-size: 10pt;
   border-top: 1px solid #eee;
   vertical-align: middle;
+  text-align: justify;
+  justify-content: center;
 }
 
 /* LINKS */
@@ -56,26 +61,21 @@ td {
   text-decoration: underline;
 }
 
-/* FECHAS */
-.dates {
-  text-align: center;
-  white-space: nowrap;
-  box-sizing: border-box;
-  width: 100px;
-  color: #f1f1f1;
-}
-
-.course{
+.course {
   color: #f1f1f1f1;
 }
 
 /* ACCIONES */
 .actions {
   font-size: 10pt;
+  height: 30px;
+}
+
+.actions-container {
   display: flex;
-  gap: 8px;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
+  gap: 10px;
 }
 
 /* BOTONES */
@@ -115,22 +115,14 @@ td {
 @media (max-width: 490px) {
   .my_grades {
     box-sizing: border-box;
-    width: 370px;
-  }
-  td {
-    width: 145px;
+    width: 410px;
+    padding: 20px;
   }
 
-  .actions {
+  .actions-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    box-sizing: border-box;
-    width: 100px;
-  }
-
-  .table-container {
-    overflow-x: auto; /* Activa scroll horizontal */
-    max-width: 100%; /* Ajusta al ancho de la pantalla */
+    gap: 10px;
   }
 }

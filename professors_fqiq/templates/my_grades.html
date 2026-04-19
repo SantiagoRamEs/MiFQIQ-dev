@@ -19,8 +19,8 @@
                 <tr>
                     <th class="label">Profesor</th>
                     <th class="label">Curso</th>
-                    <th class="label">Fecha</th>
                     <th class="label">Acciones</th>
+
                 </tr>
             </thead>
 
@@ -40,21 +40,18 @@
                         {{ grade.professorcourse.course.name_course }}
                     </td>
 
-                    <td class="dates">
-                        {{ grade.created|date:"d/m/Y" }}
-                    </td>
 
                     <td class="actions">
+                        <div class="actions-container">
+                            <a href="{% url 'editgrade' grade.id %}" class="btn-edit">
+                                Editar
+                            </a>
+                            <form method="post" action="{% url 'delete_grade' grade.id %}">
+                                {% csrf_token %}
+                                <button class="btn-delete">Eliminar</button>
+                            </form>
 
-                        <a href="{% url 'editgrade' grade.id %}" class="btn-edit">
-                            Editar
-                        </a>
-
-                        <form method="post" action="{% url 'delete_grade' grade.id %}">
-                            {% csrf_token %}
-                            <button class="btn-delete">Eliminar</button>
-                        </form>
-
+                        </div>
                     </td>
 
                 </tr>
