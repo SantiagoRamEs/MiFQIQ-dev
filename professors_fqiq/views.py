@@ -61,7 +61,7 @@ def view_professors(request):
         ]
 
         general_avg = round(sum(values) / len(values), 1) if values else 0
-        stars = '⭐' * max(0, min(int(round(general_avg)), 5))
+        stars = '★' * max(0, min(int(round(general_avg)), 5))
 
         professors.append({
             'professor': prof,

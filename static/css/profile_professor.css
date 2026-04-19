@@ -18,7 +18,7 @@
   box-sizing: border-box;
   width: 350px;
   max-width: 100%; /* CLAVE: evita desborde */
-  background: white;
+  background: #ffffff1d;
   padding: 20px;
   border-radius: 16px;
 }
@@ -30,23 +30,28 @@
 
 .photo {
   width: 100px;
+  height: 100px;
   max-width: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .name {
+  color: #f1f1f1;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 16pt;
 }
 
 .courses {
+  color: #f1f1f1;
   margin-top: 6px;
   font-size: 10pt;
 }
 
 /* FILAS DE CALIFICACIÓN */
 .rating-row {
+  color: #f1f1f1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,13 +73,14 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12pt;
+  font-size: 14pt;
+  font-weight: 400;
   color: #f2a900;
 }
 
 .rating-number {
   font-size: 11px;
-  color: #555;
+  color: #888;
 }
 
 /* COMENTARIOS */
@@ -88,19 +94,31 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 400px;
+  height: 450px;
   overflow-y: auto;
 }
 
 /* TARJETA DE COMENTARIO */
 .comment {
-  background-color: white;
+  background-color: #ffffff1d;
   border-radius: 12px;
   padding: 12px 14px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+.no-comments {
+  color: #f1f1f1f1;
+  text-align: center;
+  font-size: 12pt;
+  background-color: #ffffff1d;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
 h4,
 h3 {
+  color: #ffae00;
   text-align: center;
   margin: 10px 20px;
 }
@@ -109,7 +127,7 @@ h3 {
 .comment-header {
   font-size: 11pt;
   font-weight: 600;
-  color: #00356d;
+  color: #f1f1f1;
   margin-bottom: 6px;
 }
 
@@ -117,7 +135,7 @@ h3 {
 .comment-body {
   font-size: 11pt;
   margin-bottom: 8px;
-  color: black;
+  color: #f1f1f1;
 }
 
 /* FOOTER */
@@ -125,7 +143,13 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 9.5pt;
-  color: #777; /* más disimulado */
+  color: #888; /* más disimulado */
+}
+
+.comments-box {
+  scrollbar-color: #444 #ffffff1d;
+  scrollbar-width: thin;
+  scroll-padding-left: 20px;
 }
 
 /* CURSO */
@@ -153,7 +177,7 @@ h3 {
 .course-card {
   width: 260px;
   max-width: 100%;
-  background: white;
+  background: #ffffff1d;
   padding: 16px;
   border-radius: 16px;
 }
@@ -207,8 +231,7 @@ h3 {
     max-width: 320px;
   }
   .comments-box {
-    height: 220px;
-    max-height: 400px;
+    height: 350px;
     overflow-y: auto;
   }
 }
