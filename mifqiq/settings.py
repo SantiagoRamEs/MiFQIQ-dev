@@ -123,7 +123,7 @@ SOCIALACCOUNT_ADAPTER = 'professors_fqiq.adapters.RestrictDomainSocialAccountAda
 SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_LOGIN_CANCELLED_URL = "account_3rdparty_login_cancelled"
 
-LOGIN_REDIRECT_URL = 'professors'
+LOGIN_REDIRECT_URL = '/professors/'
 LOGIN_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
