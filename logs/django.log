@@ -2406,3 +2406,5 @@ WARNING 2026-04-19 19:07:39,127 log Not Found: /.well-known/appspecific/com.chro
 WARNING 2026-04-19 19:07:39,128 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7012
 WARNING 2026-04-19 19:07:58,955 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2026-04-19 19:07:58,956 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7012
+WARNING 2026-04-19 19:09:51,705 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-19 19:09:51,705 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7012
