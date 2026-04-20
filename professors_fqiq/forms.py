@@ -30,3 +30,11 @@ class GradeForm(forms.ModelForm):
             'grading_consistency': forms.Select(choices=CHOICES),
             'teaching_material': forms.Select(choices=CHOICES),
         }
+
+from django import forms
+
+class ProfessorSuggestionForm(forms.Form):
+    name = forms.CharField(max_length=100, label="Nombre completo (opcional) del profesor")
+    photo = forms.ImageField(required=False, label="Fotografia del profesor (opcional)")
+    course = forms.CharField(max_length=100, label="Cursos que dicta el profesor (los que conozcas)")
+    comments = forms.CharField(widget=forms.Textarea, required=False, label="Comentarios (Escuela en la que dicta, teoria o laboratorio, etc)")

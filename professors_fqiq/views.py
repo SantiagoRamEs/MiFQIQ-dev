@@ -6,6 +6,9 @@ from .forms import GradeForm
 from .models import Professor, Grade, User, ProfessorCourse, Course
 from django.contrib.auth.models import AbstractUser
 from django.db.models import Avg, Count
+from .forms import ProfessorSuggestionForm
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -286,3 +289,31 @@ class DatosPrivadosView(APIView):
             "mensaje": f"Hola {request.user.username}, acceso concedido.",
             "data": "Información sensible de la facultad"
         })
+
+
+def suggest_professor(request):
+    if request.method == "POST":
+        form = ProfessorSuggestionForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+
+            subject = "Nuevo profesor sugerido"
+            message = f"""
+            Nombre: {data['name']}
+            Curso: {data['course']}
+            Comentarios: {data['comments']}
+            """
+
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                ["ramirezsantiago2503@gmail.com"],  
+                fail_silently=False,
+            )
+
+            return redirect("/professors/") 
+    else:
+        form = ProfessorSuggestionForm()
+
+    return render(request, "suggest_professor.html", {"form": form})
