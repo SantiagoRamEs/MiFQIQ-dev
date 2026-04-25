@@ -106,9 +106,13 @@ td {
 
 /* MENSAJE VACÍO */
 .no-grades {
+  color: #fffff1;
   text-align: center;
   font-size: 12pt;
   margin-top: 20px;
+}
+.link-professors {
+  color: #fffff1;
 }
 
 @media (max-width: 490px) {

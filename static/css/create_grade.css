@@ -16,14 +16,27 @@
 .califica-a,
 .course-name {
   text-align: center;
+  margin: 0;
 }
+
+.link-description {
+  color: #f1f1f1f1;
+}
+
 .note {
   font-size: 11pt;
   padding: 10px 20px;
   text-align: center;
 }
+
+.text-fill {
+  text-align: justify;
+  padding: 0;
+}
+
 .info-container {
   padding: 15px;
+  padding-bottom: 0;
   color: #f1f1f1f1;
 }
 

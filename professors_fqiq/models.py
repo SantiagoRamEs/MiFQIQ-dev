@@ -1,5 +1,5 @@
+from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db.models import Avg
 from .validators import validate_image_size, validate_image_format, validate_image_dimensions
@@ -95,7 +95,7 @@ class Grade(models.Model):
         )
     
     user = models.ForeignKey(
-        User,
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name='grades'
         )
@@ -149,4 +149,5 @@ class Grade(models.Model):
         ]
 
     def __str__(self):
-        return f'{self.user.username} →  {self.professorcourse}'
+        username = self.user.username if self.user else 'Usuario eliminado'
+        return f'{username} →  {self.professorcourse}'

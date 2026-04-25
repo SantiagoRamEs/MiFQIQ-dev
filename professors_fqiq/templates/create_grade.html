@@ -10,11 +10,11 @@
 <div class="info-container">
 
     <h2 class="califica-a">
-        Califica a <b>{{ professor.name }}</b>
+        {{ professor.name }}
     </h2>
 
     <h3 class="course-name">
-        en <b>{{ professor_course.course.name_course }}</b>
+        Curso: {{ professor_course.course.name_course }}
     </h3>
 
     {% if error %}
@@ -33,10 +33,9 @@
         <p>Antes de calificar:</p>
 
         <p class="text-fill">
-            🔎 Te recomendamos leer primero la descripción de cada ítem antes de marcar tu calificación.
-        </p>
-
-        <p class="text-fill">
+            Te recomendamos leer primero la <a class="link-description" href="#description-container">descripción</a> de
+            cada ítem antes de
+            marcar tu calificación.
             Recuerda que cada calificación ayuda a construir una valoración justa y útil para todos.
         </p>
     </div>
@@ -86,7 +85,7 @@
 
     </form>
 
-    <div class="description-container">
+    <div class="description-container" id="description-container">
 
         <p class="description-title">
             <b>Descripción de los ítems de calificación</b>
@@ -99,10 +98,10 @@
         </p>
         <p class="description"><b>Evalúa contenidos:</b> El profesor considera lo desarrollado en clases en sus
             prácticas y/o exámenes.</p>
-        <p class="description"><b>Facilidad de exámenes:</b> El profesor evalúa con pruebas fáciles de resolver.</p>
+        <p class="description"><b>Acces. de exámenes:</b> El profesor evalúa con pruebas fáciles de resolver.</p>
         <p class="description"><b>Cumple el sílabo:</b> El profesor toma en cuenta los temas, sugerencias y fechas del
             sílabo.</p>
-        <p class="description"><b>Coherencia en la evaluación:</b> El profesor asigna puntajes coherentes en la
+        <p class="description"><b>Coherencia en calificación:</b> El profesor asigna puntajes coherentes en la
             corrección.</p>
         <p class="description"><b>Material didáctico:</b> El profesor proporciona diapositivas, videos, artículos, etc.
         </p>

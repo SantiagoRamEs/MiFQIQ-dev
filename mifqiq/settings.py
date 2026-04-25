@@ -127,6 +127,8 @@ LOGIN_REDIRECT_URL = '/professors/'
 LOGIN_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*']
 
 # MIDDLEWARE
 
@@ -171,18 +173,25 @@ WSGI_APPLICATION = 'mifqiq.wsgi.application'
 
 # DATABASE
 
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "USER": os.getenv("DB_USER"),
         "PASSWORD": os.getenv("DB_PASSWORD"),
-        "NAME": "postgres",
+        "NAME": os.getenv("DB_NAME", "postgres"),
         "HOST": os.getenv("DB_HOST"),
-        "PORT": "6543",
+        "PORT": os.getenv("DB_PORT", "6543"),
         "CONN_MAX_AGE": 0,
     }
 }
+
+if DEBUG and not os.getenv("DB_HOST"):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 
 # PASSWORD VALIDATION
@@ -209,6 +218,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),

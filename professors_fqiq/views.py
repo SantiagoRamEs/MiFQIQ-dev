@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth import get_user_model, logout
 from django import forms
 from .forms import GradeForm
-from .models import Professor, Grade, User, ProfessorCourse, Course
-from django.contrib.auth.models import AbstractUser
+from .models import Professor, Grade, ProfessorCourse, Course
 from django.db.models import Avg, Count
 from .forms import ProfessorSuggestionForm
 from django.core.mail import send_mail
 from django.conf import settings
+
+User = get_user_model()
 
 
 # Create your views here.
