@@ -7,14 +7,14 @@ class GradeForm(forms.ModelForm):
 
     class Meta:
         model = Grade
-        fields = ['puntuality', 'class_environment', 'empathy', 'class_evaluation', 'exam_accessibility', 'silabo',  'grading_consistency', 'teaching_material', 'comment']
+        fields = ['puntuality', 'class_environment', 'empathy', 'class_evaluation', 'exam_difficulty', 'silabo',  'grading_consistency', 'teaching_material', 'comment']
         labels = {
             'professor': 'Profesor',
             'puntuality': 'Puntualidad',
             'class_environment': 'Ambiente de clase',
             'empathy': 'Empatía',
             'class_evaluation': 'Evalúa contenidos',
-            'exam_accessibility': 'Acces. de exámenes',
+            'exam_difficulty': 'Dificultad de exámenes',
             'silabo': 'Cumple el sílabo',
             'grading_consistency':'Coherencia en la calif.',
             'teaching_material':'Material didáctico',
@@ -25,7 +25,7 @@ class GradeForm(forms.ModelForm):
             'class_environment': forms.Select(choices=CHOICES),
             'empathy': forms.Select(choices=CHOICES),
             'class_evaluation': forms.Select(choices=CHOICES),
-            'exam_accessibility': forms.Select(choices=CHOICES),
+            'exam_difficulty': forms.Select(choices=CHOICES),
             'silabo': forms.Select(choices=CHOICES),
             'grading_consistency': forms.Select(choices=CHOICES),
             'teaching_material': forms.Select(choices=CHOICES),
