@@ -6,46 +6,46 @@
   color: #00356d;
 }
 
-/* FILA SUPERIOR */
-.top-layout {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
+/* CABECERA DE PERFIL */
+.profile-header {
+  padding: 0px;
+  margin: 0;
 }
 
 /* PERFIL */
 .profile-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin: auto;
+  text-align: center;
   box-sizing: border-box;
-  width: 350px;
-  max-width: 100%; /* CLAVE: evita desborde */
+  width: 100%;
+  max-width: 420px;
   background: #ffffff1d;
-  padding: 20px;
-  border-radius: 16px;
+  padding: 0 14px;
+  border-radius: 20px;
 }
 
 /* INFO PERFIL */
-.profile-info {
-  text-align: center;
+.photo-container {
+  justify-content: center;
 }
-
 .photo {
   width: 100px;
   height: 100px;
-  max-width: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .name {
   color: #f1f1f1;
-  margin-top: 0;
-  margin-bottom: 10px;
   font-size: 16pt;
 }
 
 .courses {
   color: #f1f1f1;
-  margin-top: 6px;
   font-size: 10pt;
 }
 
@@ -175,8 +175,8 @@ h3 {
 .courses-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+
+  gap: 15px;
 }
 
 .course-card {
@@ -224,21 +224,12 @@ h3 {
   .container-professor {
     padding: 16px 10px;
   }
-
-  .top-layout {
-    flex-direction: column;
+  .course-card {
+    width: 100%;
+    max-width: 320px;
   }
-}
-
-.profile-card {
-  margin: auto;
-}
-
-.course-card {
-  width: 100%;
-  max-width: 320px;
-}
-.comments-box {
-  max-height: 400px;
-  overflow-y: auto;
+  .comments-box {
+    max-height: 400px;
+    overflow-y: auto;
+  }
 }

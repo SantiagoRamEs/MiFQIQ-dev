@@ -3304,3 +3304,261 @@ LINE 1: ...thy", "professors_fqiq_grade"."class_evaluation", "professor...
 ERROR 2026-04-24 17:41:35,042 basehttp "POST /admin-mifqiq/auth/user/ HTTP/1.1" 500 225184
 WARNING 2026-04-24 17:52:40,939 log Not Found: /favicon.ico
 WARNING 2026-04-24 17:52:40,943 basehttp "GET /favicon.ico HTTP/1.1" 404 6638
+WARNING 2026-05-18 13:15:17,120 log Not Found: /favicon.ico
+WARNING 2026-05-18 13:15:17,121 basehttp "GET /favicon.ico HTTP/1.1" 404 6638
+ERROR 2026-05-18 13:16:27,348 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 203, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\templatetags\rating_extras.py", line 11, in stars
+    rounded = int(round(value))
+                  ^^^^^^^^^^^^
+TypeError: type str doesn't define __round__ method
+ERROR 2026-05-18 13:16:27,360 basehttp "GET /professors/17/ HTTP/1.1" 500 202519
+WARNING 2026-05-18 13:16:28,928 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:16:28,932 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+ERROR 2026-05-18 13:17:37,890 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 203, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\templatetags\rating_extras.py", line 11, in stars
+    rounded = int(round(value))
+                  ^^^^^^^^^^^^
+TypeError: type str doesn't define __round__ method
+ERROR 2026-05-18 13:18:08,064 log Internal Server Error: /professors/17/
+Traceback (most recent call last):
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\views.py", line 203, in profile_professor
+    return render(request, "profile_professor.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\venv\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ramir\OneDrive\Documentos\GitHub\MiFQIQ-dev\professors_fqiq\templatetags\rating_extras.py", line 11, in stars
+    rounded = int(round(value))
+                  ^^^^^^^^^^^^
+TypeError: type str doesn't define __round__ method
+ERROR 2026-05-18 13:18:08,073 basehttp "GET /professors/17/ HTTP/1.1" 500 219814
+WARNING 2026-05-18 13:18:08,149 log Not Found: /favicon.ico
+WARNING 2026-05-18 13:18:08,154 basehttp "GET /favicon.ico HTTP/1.1" 404 6638
+WARNING 2026-05-18 13:38:44,621 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:38:44,625 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:39:14,836 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:39:14,838 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:39:40,811 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:39:40,813 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:39:58,754 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:39:58,755 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:41:02,625 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:41:02,625 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:41:53,614 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:41:53,616 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:42:05,225 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:42:05,225 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:42:16,360 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:42:16,360 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:43:44,853 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:43:44,853 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:44:55,216 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:44:55,216 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:45:20,806 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:45:20,808 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:46:59,145 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:46:59,145 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:47:20,368 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:47:20,371 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:47:42,817 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:47:42,817 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:48:12,728 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:48:12,728 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:49:58,282 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:49:58,283 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:51:53,183 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:51:53,186 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:52:24,094 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:52:24,096 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 13:52:35,476 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 13:52:35,479 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749
+WARNING 2026-05-18 14:12:33,706 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-18 14:12:33,706 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 6749

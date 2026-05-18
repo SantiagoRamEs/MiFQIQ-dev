@@ -139,17 +139,7 @@ def profile_professor(request, pk):
         'teaching_material',
     ]
 
-    # PROMEDIO GENERAL (1 query)
     grades = Grade.objects.filter(professorcourse__professor=professor)
-
-    stats_raw = grades.aggregate(**{
-        f'avg_{field}': Avg(field) for field in rating_fields
-    })
-
-    stats = {
-        key: round(value, 2) if value else None
-        for key, value in stats_raw.items()
-    }
 
     # CURSOS OPTIMIZADOS
     courses_qs = ProfessorCourse.objects.filter(
@@ -202,7 +192,6 @@ def profile_professor(request, pk):
 
     return render(request, "profile_professor.html", {
         "professor": professor,
-        "stats": stats,
         "courses": course_stats,
         "grades": grades_with_comments,
         "has_comments": grades_with_comments.exists()
@@ -244,6 +233,34 @@ def delete_grade(request, grade_id):
         grade.delete()
 
     return redirect('my_grades')
+
+
+def suggest_professor(request):
+    if request.method == "POST":
+        form = ProfessorSuggestionForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+
+            subject = "Nuevo profesor sugerido"
+            message = f"""
+            Nombre: {data['name']}
+            Curso: {data['course']}
+            Comentarios: {data['comments']}
+            """
+
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                ["ramirezsantiago2503@gmail.com"],  
+                fail_silently=False,
+            )
+
+            return redirect("/professors/") 
+    else:
+        form = ProfessorSuggestionForm()
+
+    return render(request, "suggest_professor.html", {"form": form})
 
 
 
@@ -292,29 +309,3 @@ class DatosPrivadosView(APIView):
         })
 
 
-def suggest_professor(request):
-    if request.method == "POST":
-        form = ProfessorSuggestionForm(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-
-            subject = "Nuevo profesor sugerido"
-            message = f"""
-            Nombre: {data['name']}
-            Curso: {data['course']}
-            Comentarios: {data['comments']}
-            """
-
-            send_mail(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                ["ramirezsantiago2503@gmail.com"],  
-                fail_silently=False,
-            )
-
-            return redirect("/professors/") 
-    else:
-        form = ProfessorSuggestionForm()
-
-    return render(request, "suggest_professor.html", {"form": form})
