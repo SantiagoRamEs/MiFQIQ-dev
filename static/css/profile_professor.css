@@ -175,7 +175,6 @@ h3 {
 .courses-grid {
   display: flex;
   flex-wrap: wrap;
-
   gap: 15px;
 }
 
@@ -231,5 +230,10 @@ h3 {
   .comments-box {
     max-height: 400px;
     overflow-y: auto;
+  }
+  .courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
