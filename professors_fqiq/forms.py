@@ -14,7 +14,7 @@ class GradeForm(forms.ModelForm):
             'class_environment': 'Ambiente de clase',
             'empathy': 'Empatía',
             'class_evaluation': 'Evalúa contenidos',
-            'exam_difficulty': 'Dificultad de exámenes',
+            'exam_difficulty': 'Accecibilidad de exámenes',
             'silabo': 'Cumple el sílabo',
             'grading_consistency':'Coherencia en la calif.',
             'teaching_material':'Material didáctico',
