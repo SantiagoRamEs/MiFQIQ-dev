@@ -84,6 +84,8 @@ INSTALLED_APPS = [
 
     # app
     'professors_fqiq',
+    #PWA
+    'pwa',
 
     #API
     'drf_spectacular',
@@ -350,3 +352,18 @@ EMAIL_HOST_USER = 'ramirezsantiago2503@gmail.com'
 EMAIL_HOST_PASSWORD = os.getenv('APP_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+#PWA
+PWA_APP_NAME = "Mi FQIQ"
+PWA_APP_THEME_COLOR= '#F5F5F8'
+PWA_APP_BACKGROUND = '#F5F5F8'
+
+PWA_APP_ICONS = [
+    {
+        "src": "/static/images/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    
+]
